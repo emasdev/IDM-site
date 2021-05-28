@@ -1,0 +1,25 @@
+.navbar-brand span {
+  font-size: 1.1rem;
+}
+
+.navbar {
+  background-color: #16c2d5 !important;
+}
+
+.bg-primary {
+  background-color: #89dee2 !important;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #2e4450;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+  color: #fff;
+  background: #527c88;
+}
+
+#mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+  color: #fff;
+  background: #527c88;
+}
