@@ -23,3 +23,15 @@
   color: #fff;
   background: #527c88;
 }
+
+#header img {
+  width: 100%;
+}
+/* 
+#header {
+  background-image: url("../assets/img/logo-2.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: ;
+} */
