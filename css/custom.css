@@ -3,7 +3,7 @@
 }
 
 .navbar {
-  background-color: #439bff !important;
+  background-color: #439bff96 !important;
 }
 
 .bg-primary {
@@ -26,6 +26,20 @@
 
 #header img {
   width: 100%;
+}
+
+.btn-outline-primary {
+  background-color: #439bff;
+  border-color: #439bff;
+  color: white;
+}
+
+.divider-custom-icon{
+  color: #439bff !important;
+}
+
+.text-primary {
+  color: #495c8a !important  ;
 }
 /* 
 #header {
