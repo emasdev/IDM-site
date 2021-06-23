@@ -34,12 +34,16 @@
   color: white;
 }
 
-.divider-custom-icon{
+.divider-custom-icon {
   color: #439bff !important;
 }
 
 .text-primary {
   color: #495c8a !important  ;
+}
+
+.portfolio-modal-title {
+  font-size: 2rem !important;
 }
 /* 
 #header {
