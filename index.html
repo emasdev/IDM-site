@@ -186,7 +186,7 @@
     <section class="page-section bg-primary text-primary mb-0" id="about">
       <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-primary">Acerca de Nosotros</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-primary">Nosotros</h2>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
@@ -194,18 +194,29 @@
           <div class="divider-custom-line"></div>
         </div>
         <!-- About Section Content-->
-        <div class="row">
-          <div class="col-lg-4 ms-auto">
-            <h3 class="text-center">Misión</h3>
+        <div class="row text-center">
+          <div class="offset-3 col-6 mb-3">
+            <h3>¿Quienes sómos?</h3>
             <p class="lead">
-              Somos un centro de diagnostico especializado en radiología digital del área de cabeza, cuello y cavidad
-              oral. Radiografía entregada Impresa o por medios electrónicos.
+              Somos un centro de diagnostico radiológico especializado en el área de cabeza y cuello, que opera conforme
+              a los mas altos estándares de calidad, utilizando tecnología de vanguardia y proporcionando el mejor trato
+              hacia sus pacientes.
             </p>
           </div>
-          <div class="col-lg-4 me-auto">
-            <h3 class="text-center">Visión</h3>
+          <div class="col-6">
+            <h3 class="text-center">Nuestra Misión</h3>
             <p class="lead">
-              Utilizamos tecnologia de vanguardia, brindando una atencion impecable a Doctores y pacientes.
+              Apoyar a los profesionales de la salud en la obtención de diagnósticos mas precisos, a través de la oferta
+              de servicios auxiliares al diagnostico de la mas alta calidad, el tiempo de entrega mas rápido y un trato
+              altamente humano hacia el paciente.
+            </p>
+          </div>
+          <div class="col-6">
+            <h3 class="text-center">Nuestra Visión</h3>
+            <p class="lead">
+              Ser un importante aliado de los doctores que nos favorecen refiriendo sus pacientes hacia nuestro centro,
+              funcionando como una extension de sus consultorios o clínicas, ofreciendo el mejor servicio, un trato
+              inigualable a sus pacientes.
             </p>
           </div>
         </div>
@@ -215,7 +226,7 @@
     <section class="page-section portfolio" id="portfolio">
       <div class="container">
         <!-- Portfolio Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Galeria</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Servicios</h2>
         <!-- Icon Divider-->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
@@ -298,7 +309,7 @@
     <section class="page-section bg-primary text-primary mb-0" id="about">
       <div class="container">
         <!-- About Section Heading-->
-        <h2 class="page-section-heading text-center text-uppercase text-primary">Mapa</h2>
+        <h2 class="page-section-heading text-center text-uppercase text-primary">Ubicación</h2>
         <!-- Icon Divider-->
         <div class="divider-custom divider-light">
           <div class="divider-custom-line"></div>
@@ -648,64 +659,62 @@
           <div class="modal-body text-center pb-5">
             <div class="container">
               <div class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                   <!-- Portfolio Modal - Title-->
                   <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Agenda tu cita</h2>
                   <!-- Portfolio Modal - Image-->
                   <div class="step" id="step-0">
-                    <form>
-                      <div class="row">
-                        <div class="col-12">
-                          <h4 class="text-start">Paciente</h4>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="paciente-nombre" placeholder="Nombre" />
-                            <label for="paciente-nombre">Nombre</label>
+                    <div class="col-lg-8 m-auto">
+                      <form>
+                        <div class="row pt-3 group">
+                          <div class="col-12">
+                            <h4 class="text-start">Paciente</h4>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="paciente-nombre" placeholder="Nombre" />
+                              <label for="paciente-nombre">Nombre</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="tel" class="form-control" id="paciente-telefono" placeholder="Teléfono" />
+                              <label for="paciente-telefono">Teléfono</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="email" class="form-control" id="paciente-email" placeholder="Email" />
+                              <label for="paciente-email">Email</label>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-6">
-                          <div class="form-floating mb-3">
-                            <input
-                              type="date"
-                              class="form-control"
-                              id="paciente-fecha"
-                              placeholder="Fecha Nacimiento"
-                            />
-                            <label for="paciente-fecha">Fecha Nacimiento</label>
+                        <div class="row pt-3 my-4 group">
+                          <div class="col-12">
+                            <h4 class="text-start">Doctor</h4>
+                          </div>
+                          <div class="col-12">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="doctor-nombre" placeholder="Nombre" />
+                              <label for="doctor-nombre">Nombre</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="tel" class="form-control" id="doctor-telefono" placeholder="Teléfono" />
+                              <label for="doctor-telefono">Teléfono</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="email" class="form-control" id="doctor-email" placeholder="Email" />
+                              <label for="doctor-email">Email</label>
+                            </div>
                           </div>
                         </div>
-                        <div class="col-6">
-                          <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="paciente-telefono" placeholder="Teléfono" />
-                            <label for="paciente-telefono">Teléfono</label>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-12">
-                          <h4 class="text-start">Doctor</h4>
-                        </div>
-                        <div class="col-12">
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="doctor-nombre" placeholder="Nombre" />
-                            <label for="doctor-nombre">Nombre</label>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="doctor-telefono" placeholder="Teléfono" />
-                            <label for="doctor-telefono">Teléfono</label>
-                          </div>
-                        </div>
-                        <div class="col-6">
-                          <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="doctor-email" placeholder="Email" />
-                            <label for="doctor-email">Email</label>
-                          </div>
-                        </div>
-                      </div>
-                    </form>
+                      </form>
+                    </div>
+
                     <!-- Portfolio Modal - Text-->
                     <p class="mb-4">Llena los datos de tu paciente y dinos quien eres.</p>
                     <button class="btn btn-secondary step-btn" href="#!" data-index="1">
@@ -714,9 +723,415 @@
                     </button>
                   </div>
                   <div class="step d-none" id="step-1">
-                    <img class="img-fluid rounded mb-5" src="assets/img/formulario.png" alt="..." />
+                    <!-- <img class="img-fluid rounded mb-5" src="assets/img/formulario.png" alt="..." /> -->
+                    <!-- Formulario de orden de estudio -->
+                    <div class="col-lg-10 m-auto">
+                      <form id="ordenDeEstudio">
+                        <div class="row">
+                          <div class="col-6">
+                            <div class="mx-2">
+                              <div class="row py-3 group text-start">
+                                <div class="col-12">
+                                  <h4 class="">Radiografia Digital 2D</h4>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault1"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault1">RX Panorámica</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2"
+                                      >RX Lateral de cráneo 3/4</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2">Con plomada</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2"
+                                      >RX Lateral de cráneo completo</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2">Con plomada</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2">RX AP de cráneo</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2">Waters</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2"
+                                      >RX ATM (boca abierta/cerrada)</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2"
+                                      >Senos paranasales (3 proyecciones) Lateral, PA, Waters</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2">RX Oclusal</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2">RX Carpal</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="flexRadioDefault"
+                                      id="flexRadioDefault2"
+                                    />
+                                    <label class="form-check-label" for="flexRadioDefault2"
+                                      >Serie RX Periapacal individual</label
+                                    >
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <img class="w-100" src="assets/img/dientes.png" alt="" />
+                                </div>
+                                <div class="col-8">
+                                  <div class="form-floating mb-3">
+                                    <input
+                                      type="text"
+                                      class="form-control"
+                                      id="paciente-dientes"
+                                      placeholder="Dientes"
+                                    />
+                                    <label for="paciente-dientes">Dientes (Ejemplo 1,24,36)</label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row py-3 group text-start">
+                              <div class="col-12">
+                                <h4 class="">Fotografias</h4>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="Fotografias" id="Fotografias1" />
+                                  <label class="form-check-label" for="Fotografias1">Intraoral</label>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="Fotografias" id="Fotografias1" />
+                                  <label class="form-check-label" for="Fotografias1">Extraorales</label>
+                                </div>
+                              </div>
+                              <div class="col-6">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="radio" name="Fotografias" id="Fotografias1" />
+                                  <label class="form-check-label" for="Fotografias1">Análisis Facial</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row py-3 group text-start">
+                              <div class="col-12">
+                                <h4 class="">Modelos de Estudio</h4>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="ModelosDeEstudio"
+                                    id="ModelosDeEstudio1"
+                                  />
+                                  <label class="form-check-label" for="ModelosDeEstudio1">Caja plástico</label>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="ModelosDeEstudio"
+                                    id="ModelosDeEstudio1"
+                                  />
+                                  <label class="form-check-label" for="ModelosDeEstudio1">Modelo 3D Digital</label>
+                                </div>
+                              </div>
+                              <div class="col-12">
+                                <div class="form-check">
+                                  <input
+                                    class="form-check-input"
+                                    type="radio"
+                                    name="ModelosDeEstudio"
+                                    id="ModelosDeEstudio1"
+                                  />
+                                  <label class="form-check-label" for="ModelosDeEstudio1">Modelo 3D Impreso</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="mx-2">
+                              <div class="row py-3 group text-start">
+                                <div class="col-12">
+                                  <h4 class="">Fotografias</h4>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Fotografias" id="Fotografias1" />
+                                    <label class="form-check-label" for="Fotografias1">Intraoral</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Fotografias" id="Fotografias1" />
+                                    <label class="form-check-label" for="Fotografias1">Extraorales</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Fotografias" id="Fotografias1" />
+                                    <label class="form-check-label" for="Fotografias1">Análisis Facial</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row py-3 group text-start">
+                                <div class="col-12">
+                                  <h4 class="">Análisis Cefalométricos</h4>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="PaquetesCompletos"
+                                      id="PaquetesCompletos1"
+                                    />
+                                    <label class="form-check-label" for="PaquetesCompletos1">Ricketts</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="PaquetesCompletos"
+                                      id="PaquetesCompletos1"
+                                    />
+                                    <label class="form-check-label" for="PaquetesCompletos1">Ricketts Frontal</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="PaquetesCompletos"
+                                      id="PaquetesCompletos1"
+                                    />
+                                    <label class="form-check-label" for="PaquetesCompletos1">Steiner</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="PaquetesCompletos"
+                                      id="PaquetesCompletos1"
+                                    />
+                                    <label class="form-check-label" for="PaquetesCompletos1">Bjork - Jarabak</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="PaquetesCompletos"
+                                      id="PaquetesCompletos1"
+                                    />
+                                    <label class="form-check-label" for="PaquetesCompletos1">Mc Namara</label>
+                                  </div>
+                                </div>
+                                <div class="col-6">
+                                  <div class="form-check">
+                                    <input
+                                      class="form-check-input"
+                                      type="radio"
+                                      name="PaquetesCompletos"
+                                      id="PaquetesCompletos1"
+                                    />
+                                    <label class="form-check-label" for="PaquetesCompletos1">Otro</label>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row py-3 group text-start">
+                                <div class="col-12">
+                                  <h4 class="">Tomografía 3D</h4>
+                                </div>
+                                <div class="col-4">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">CD (VISOR)</label>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">CD (DICOM) </label>
+                                  </div>
+                                </div>
+                                <div class="col-4 mb-3">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">PLACA RX </label>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">Maxilar Superior</label>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">Mailar Inferior</label>
+                                  </div>
+                                </div>
+                                <div class="col-4">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">Ambos</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">Cráneo Completo</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">ATM (boca abierta/cerrada)</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">Nariz y Senos Paranasales</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1">Nariz y Senos Paranasales</label>
+                                  </div>
+                                </div>
+                                <div class="col-12">
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Tomografia" id="Tomografia1" />
+                                    <label class="form-check-label" for="Tomografia1"
+                                      >Zona Especifica (marcar zona de interés)</label
+                                    >
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
                     <!-- Portfolio Modal - Text-->
-                    <p class="mb-4">Llena la orden de trabajo de tu paciente</p>
+                    <p class="my-4">Llena los datos requeridos</p>
                     <button class="btn btn-secondary step-btn" href="#!" data-index="0">
                       Anterior
                       <i class="fas fa-arrow-left fa-fw"></i>
@@ -731,7 +1146,7 @@
                       <input type="datetime-local" class="form-control" id="horario-cita" placeholder="Horarío Cita" />
                       <label for="horario-cita">Horarío Cita</label>
                     </div>
-                    <p class="mb-4">Llena la orden de trabajo de tu paciente</p>
+                    <p class="mb-4">Llena la orden de trabajo</p>
                     <button class="btn btn-secondary step-btn" href="#!" data-index="1">
                       Anterior
                       <i class="fas fa-arrow-left fa-fw"></i>
