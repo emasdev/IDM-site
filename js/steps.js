@@ -1,5 +1,6 @@
 // Shorthand for $( document ).ready()
 $(function () {
+  $("#calendario").simpleCalendar();
   $(".step-btn").click(function () {
     const stepElm = "#step-" + $(this).data("index");
     $(".step").hide();

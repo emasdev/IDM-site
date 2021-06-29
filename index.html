@@ -21,6 +21,7 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/custom.css" rel="stylesheet" />
+    <link href="css/calendar.css" rel="stylesheet" />
   </head>
 
   <body id="page-top">
@@ -706,10 +707,16 @@
                           <div class="col-12">
                             <h4 class="text-start">Paciente</h4>
                           </div>
-                          <div class="col-12">
+                          <div class="col-6">
                             <div class="form-floating mb-3">
                               <input type="text" class="form-control" id="paciente-nombre" placeholder="Nombre" />
                               <label for="paciente-nombre">Nombre</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="paciente-nombre" placeholder="Apellidos" />
+                              <label for="paciente-apellidos">Apellidos</label>
                             </div>
                           </div>
                           <div class="col-6">
@@ -733,6 +740,12 @@
                             <div class="form-floating mb-3">
                               <input type="text" class="form-control" id="doctor-nombre" placeholder="Nombre" />
                               <label for="doctor-nombre">Nombre</label>
+                            </div>
+                          </div>
+                          <div class="col-6">
+                            <div class="form-floating mb-3">
+                              <input type="text" class="form-control" id="doctor-apellidos" placeholder="Apellidos" />
+                              <label for="doctor-apellidos">Apellidos</label>
                             </div>
                           </div>
                           <div class="col-6">
@@ -1228,11 +1241,20 @@
                     </button>
                   </div>
                   <div class="step d-none" id="step-2">
-                    <div class="form-floating mb-3">
-                      <input type="datetime-local" class="form-control" id="horario-cita" placeholder="Horarío Cita" />
-                      <label for="horario-cita">Horarío Cita</label>
+                    <div class="col-lg-8 m-auto">
+                      <div class="form-floating mb-3">
+                        <!-- <input
+                          type="datetime-local"
+                          class="form-control"
+                          id="horario-cita"
+                          placeholder="Horarío Cita"
+                        />
+                        <label for="horario-cita">Horarío Cita</label> -->
+                        <div id="calendario" class="calendar-container"></div>
+                      </div>
+                      <p class="mb-4">Elige el día en que asistiras a tu cita.</p>
                     </div>
-                    <p class="mb-4">Llena la orden de trabajo</p>
+
                     <button class="btn btn-secondary step-btn" href="#!" data-index="1">
                       Anterior
                       <i class="fas fa-arrow-left fa-fw"></i>
@@ -1243,7 +1265,9 @@
                     </button>
                   </div>
                   <div class="step d-none" id="step-3">
-                    <div class="alert alert-normal" role="alert">En breve nos comunicaremos contigo.</div>
+                    <div class="col-lg-8 m-auto">
+                      <div class="alert alert-normal" role="alert">En breve nos comunicaremos contigo.</div>
+                    </div>
                     <button class="btn btn-primary" href="#!" data-bs-dismiss="modal">
                       <i class="fas fa-times fa-fw"></i>
                       Cerrar ventana
@@ -1265,6 +1289,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <!--<script src="js/scripts.js"></script>-->
+    <script src="js/calendar.js"></script>
     <script src="js/steps.js"></script>
   </body>
 </html>
