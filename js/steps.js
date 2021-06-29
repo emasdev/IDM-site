@@ -7,4 +7,9 @@ $(function () {
     console.log(stepElm);
     $(stepElm).show();
   });
+
+  $("#contact-modal").on("show.bs.modal", function (event) {
+    $(".step").hide();
+    $("#step-0").show();
+  });
 });
