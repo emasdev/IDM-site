@@ -1,7 +1,6 @@
 // Shorthand for $( document ).ready()
-$(function () {
-  $("#calendario").simpleCalendar();
-  $(".step-btn").click(function () {
+$(function() {
+  $(".step-btn").click(function() {
     const stepElm = "#step-" + $(this).data("index");
     $(".step").hide();
     $(".step").removeClass("d-none");
@@ -9,7 +8,7 @@ $(function () {
     $(stepElm).show();
   });
 
-  $("#contact-modal").on("show.bs.modal", function (event) {
+  $("#contact-modal").on("show.bs.modal", function(event) {
     $(".step").hide();
     $("#step-0").show();
   });

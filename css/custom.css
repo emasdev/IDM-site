@@ -38,6 +38,17 @@
   color: #439bff !important;
 }
 
+.btn-outline-primary:hover {
+  color: #fff;
+  background-color: #0a7dff;
+  border-color: #0a7dff;
+}
+
+.btn-check:focus + .btn-outline-primary,
+.btn-outline-primary:focus {
+  box-shadow: 0 0 0 0.25rem #cccccc80;
+}
+
 .text-blue {
   color: #439bff;
 }
