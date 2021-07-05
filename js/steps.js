@@ -11,5 +11,7 @@ $(function() {
   $("#contact-modal").on("show.bs.modal", function(event) {
     $(".step").hide();
     $("#step-0").show();
+    $("#datos-doctor").trigger("reset");
+    $("#orden-estudio").trigger("reset");
   });
 });

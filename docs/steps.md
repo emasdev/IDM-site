@@ -10,8 +10,9 @@ This is a website for .
 - Add menu
 - Add gallery
 - Add ratings
-- Change radio buttons for checkboxes in OrdenDeTrabajo
 
 ## Present Steps
 
-- Add checkboxes for teeth
+- Change radio buttons for checkboxes in OrdenDeTrabajo
+- Create checkboxes on demand for dientes
+- Clean form on click
