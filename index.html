@@ -676,26 +676,29 @@
                 <!-- Portfolio Modal - Image-->
                 <div class="step" id="step-0">
                   <div class="col-lg-8 m-auto">
-                    <form id="datos-doctor">
+                    <form id="datos-doctor" class="needs-validation" novalidate>
                       <div class="row pt-3 group">
                         <div class="col-12">
                           <h4 class="text-start">Paciente</h4>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="paciente-nombre" placeholder="Nombre" />
+                            <input required type="text" class="form-control" id="paciente-nombre"
+                              placeholder="Nombre" />
                             <label for="paciente-nombre">Nombre</label>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="paciente-nombre" placeholder="Apellidos" />
+                            <input required type="text" class="form-control" id="paciente-nombre"
+                              placeholder="Apellidos" />
                             <label for="paciente-apellidos">Apellidos</label>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="paciente-telefono" placeholder="Teléfono" />
+                            <input required type="tel" class="form-control" id="paciente-telefono"
+                              placeholder="Teléfono" />
                             <label for="paciente-telefono">Teléfono</label>
                           </div>
                         </div>
@@ -712,35 +715,39 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="doctor-nombre" placeholder="Nombre" />
+                            <input required type="text" class="form-control" id="doctor-nombre" placeholder="Nombre" />
                             <label for="doctor-nombre">Nombre</label>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="doctor-apellidos" placeholder="Apellidos" />
+                            <input required type="text" class="form-control" id="doctor-apellidos"
+                              placeholder="Apellidos" />
                             <label for="doctor-apellidos">Apellidos</label>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="tel" class="form-control" id="doctor-telefono" placeholder="Teléfono" />
+                            <input required type="tel" class="form-control" id="doctor-telefono"
+                              placeholder="Teléfono" />
                             <label for="doctor-telefono">Teléfono</label>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="doctor-email" placeholder="Email" />
+                            <input required type="email" class="form-control" id="doctor-email" placeholder="Email" />
                             <label for="doctor-email">Email</label>
                           </div>
                         </div>
                       </div>
+
                     </form>
+
                   </div>
 
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-4">Ingrese sus datos y los de su paciente.</p>
-                  <button class="btn btn-secondary step-btn" href="#!" data-index="1">
+                  <button class="btn btn-secondary" type="submit" form="datos-doctor" id="doctor-submit">
                     Siguiente
                     <i class="fas fa-arrow-right fa-fw"></i>
                   </button>
@@ -1346,6 +1353,7 @@
   <script src="js/calendar.js"></script>
   <script src="js/steps.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/validation.js"></script>
 </body>
 
 </html>
