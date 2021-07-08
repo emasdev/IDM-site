@@ -1,5 +1,29 @@
 $(function() {
-  $("#calendario").simpleCalendar();
+  $("#calendario").simpleCalendar({
+    months: [
+      "Enero",
+      "Febrero",
+      "Marzo",
+      "Abril",
+      "Mayo",
+      "Junio",
+      "Julio",
+      "Agosto",
+      "Septiembre",
+      "Octubre",
+      "Noviembre",
+      "Diciembre",
+    ],
+    days: [
+      "Sabado",
+      "Lunes",
+      "Martes",
+      "Miercoles",
+      "Jueves",
+      "Viernes",
+      "Sabado",
+    ],
+  });
 
   //generateDientes(document.getElementById("dientes"));
 
