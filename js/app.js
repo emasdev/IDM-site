@@ -15,7 +15,7 @@ $(function() {
       "Diciembre",
     ],
     days: [
-      "Sabado",
+      "Domingo",
       "Lunes",
       "Martes",
       "Miercoles",
@@ -23,6 +23,19 @@ $(function() {
       "Viernes",
       "Sabado",
     ],
+    onDateSelect: function (date, events) {
+      console.log(date);
+      console.log(events);
+      var html = '<p>Paciente: ' + $("#paciente-nombre").val() + ' ' + $("#paciente-apellidos").val() + '</p>';
+      html += '<p>Doctor: ' + $("#doctor-nombre").val() + ' ' + $("#doctor-apellidos").val() + '</p>';
+      html += '<p>Fecha: ' + date + '</p>';
+      html += '<label for="hora-cita">Elije el horario que más le convenga y lo confirmaremos disponibilidad:</label><input type="time" id="hora-cita" name="hora-cita" min="09:00" max="19:00" step="9000" required /><p>Estamos abiertos de 09:00 a 19:00</p>';
+      $('.event-container').append(html);
+      // var paciente = {
+      //   "nombre": $("#paciente-nombre"),
+      //   "apellidos": $("#paciente-apellidos"),
+      // }
+    },
   });
 
   //generateDientes(document.getElementById("dientes"));

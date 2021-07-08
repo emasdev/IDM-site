@@ -2,7 +2,7 @@
 (function() {
   "use strict";
 
-  var needValidation = true;
+  var needValidation = false;
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
 
@@ -20,7 +20,6 @@
               tabToStep(1);
             }
           }
-
           form.classList.add("was-validated");
         } else {
           tabToStep(1);
