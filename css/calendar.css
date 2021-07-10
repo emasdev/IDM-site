@@ -119,7 +119,8 @@
   width: 100%;
   height: 100%;
   padding: 70px;
-  background-color: #439bff;
+  background-color: #d0e6ff;
+  color: #495c8a;
   box-sizing: border-box;
 }
 .calendar .event-container .event-wrapper {
@@ -142,7 +143,7 @@
   left: 50%;
   width: 2px;
   height: 100%;
-  background-color: #cbd1d2;
+  background-color: #737373;
 }
 .calendar .event-container .close:before {
   transform: rotate(45deg);
@@ -155,12 +156,11 @@
   width: 100%;
   padding: 1em;
   margin-bottom: 1em;
-  background: #439bff;
+  background: #d0e6ff;
   border-radius: 4px;
   box-sizing: border-box;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
   text-align: left;
-  color: white;
 }
 .calendar .event-container .event-date {
   margin-bottom: 1em;
@@ -176,6 +176,6 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color: #439bff;
+  background-color: #d0e6ff;
   transform: translate(-50%, -50%);
 }

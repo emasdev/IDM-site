@@ -18,18 +18,30 @@ $(function () {
     onDateSelect: function (date, events) {
       console.log(date);
       console.log(events);
-      var html = "<p>Paciente: " + $("#paciente-nombre").val() + " " + $("#paciente-apellidos").val() + "</p>";
-      html += "<p>Doctor: " + $("#doctor-nombre").val() + " " + $("#doctor-apellidos").val() + "</p>";
-      html += "<p>Fecha: " + date.toDateString() + "</p>";
+      var dd = String(date.getDate()).padStart(2, "0");
+      var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
+      var yyyy = date.getFullYear();
+      var textDate = mm + "/" + dd + "/" + yyyy;
+      var html = "<div>Paciente</div>";
+      html += "<div><strong>" + $("#paciente-nombre").val() + $("#paciente-apellidos").val() + "</strong></div>";
+      html += "<div class='mt-2'>Doctor</div>";
+      html += "<div><strong>" + $("#doctor-nombre").val() + $("#doctor-apellidos").val() + "</strong></div>";
+      html += "<div class='mt-2'>Fecha</div><div><strong>" + textDate + "</strong></div>";
       html +=
-        '<input type="time" id="hora-cita" name="hora-cita" min="09:00" max="19:00" step="9000" required /><p>Estamos abiertos de 09:00 a 19:00</p>';
-
+        '<form class="horario-cita mt-3"><input type="time" id="hora-cita" name="hora-cita" min="09:00" max="19:00" step="9000" required /><p class="mt-2">Estamos abiertos de 09:00 a 19:00</p></form>';
+      $("#agendar-btn").show();
       $(".event-wrapper").html(html);
       // var paciente = {
       //   "nombre": $("#paciente-nombre"),
       //   "apellidos": $("#paciente-apellidos"),
       // }
     },
+  });
+
+  $("#agendar-btn").click(function () {
+    const html = "<div class='centrar'>En breve nos comunicaremos con usted.</div>";
+    $(".event-wrapper").html(html);
+    $(".btn-to-hide").hide();
   });
 
   //generateDientes(document.getElementById("dientes"));

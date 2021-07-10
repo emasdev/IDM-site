@@ -81,6 +81,14 @@
 .event-container {
   color: white;
 }
+
+.centrar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 /* 
 #header {
   background-image: url("../assets/img/logo-2.png");
