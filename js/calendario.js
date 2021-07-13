@@ -1,5 +1,4 @@
 $(function() {
-  var needValidation = true;
   $("#calendario").simpleCalendar({
     months: [
       "Enero",
@@ -31,8 +30,8 @@ $(function() {
         var dd = String(date.getDate()).padStart(2, "0");
         var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
         var yyyy = date.getFullYear();
-        var html = mm + "/" + dd + "/" + yyyy;
-        $("#cita-fecha-label").html(html);
+        var html = dd + "/" + mm + "/" + yyyy;
+        var dia = $("#cita-fecha-label").html(html);
       }
       // var html = "<div>Paciente</div>";
       // html += "<div><strong>" + $("#paciente-nombre").val() + $("#paciente-apellidos").val() + "</strong></div>";
@@ -50,6 +49,7 @@ $(function() {
     },
     onInit: function(calendar) {
       console.log("on init");
+      var needValidation = true;
       var html = "";
       $.getJSON("select_horarios.json", function(data) {
         console.log(data);
@@ -90,6 +90,7 @@ $(function() {
 
           function print() {
             console.log(calendar);
+
             $("#cita-hora").html(hora);
             $("#cita-minutos").html(minutos);
             if (hora && minutos) {
@@ -116,5 +117,12 @@ $(function() {
       });
       console.log(html);
     }
+  });
+
+  $("#agendar-btn").click(function() {
+    const html =
+      "<div class='centrar'>En breve nos comunicaremos con usted.</div>";
+    $(".event-wrapper").html(html);
+    $(".btn-to-hide").hide();
   });
 });

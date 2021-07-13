@@ -675,9 +675,10 @@
             <div class="row justify-content-center">
               <div class="col-lg-12">
                 <!-- Portfolio Modal - Title-->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Agende su cita</h2>
+
                 <!-- Portfolio Modal - Image-->
                 <div class="step" id="step-0">
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Agende su cita</h2>
                   <div class="col-lg-8 m-auto">
                     <form id="datos-doctor" class="needs-validation" novalidate>
                       <div class="row pt-3 group">
@@ -748,15 +749,14 @@
                   </div>
 
                   <!-- Portfolio Modal - Text-->
-                  <p class="mb-4">Ingrese sus datos y los de su paciente.</p>
+                  <p class="mb-4">Ingresar datos.</p>
                   <button class="btn btn-outline-primary" type="submit" form="datos-doctor" id="doctor-submit">
                     Siguiente
                     <i class="fas fa-arrow-right fa-fw"></i>
                   </button>
                 </div>
                 <div class="step d-none" id="step-1">
-                  <!-- <img class="img-fluid rounded mb-5" src="assets/img/formulario.png" alt="..." /> -->
-                  <!-- Formulario de orden de estudio -->
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Orden de estudio</h2>
                   <div class="col-lg-12 m-auto">
                     <form id="orden-estudio">
                       <div class="row">
@@ -1225,7 +1225,7 @@
                   </div>
 
                   <!-- Portfolio Modal - Text-->
-                  <p class="my-4">Llena los datos requeridos</p>
+                  <p class="my-4">Seleccionar estudios a realizar</p>
                   <button class="btn btn-outline-primary step-btn" href="#!" data-index="0">
                     Anterior
                     <i class="fas fa-arrow-left fa-fw"></i>
@@ -1236,21 +1236,59 @@
                   </button>
                 </div>
                 <div class="step d-none" id="step-2">
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Seleccionar horario</h2>
                   <div class="col-lg-8 m-auto">
                     <div class="">
                       <div id="calendario" class="calendar-container"></div>
                     </div>
-                    <p class="mb-4 btn-to-hide">Elija el día y hora para agendar cita.</p>
+                    <p class="mb-4 btn-to-hide">Seleccione día y hora para confirmar cita.</p>
                   </div>
 
                   <button class="btn btn-outline-primary step-btn btn-to-hide" href="#!" data-index="1">
                     Anterior
                     <i class="fas fa-arrow-left fa-fw"></i>
                   </button>
-                  <button class="btn btn-outline-primary btn-to-hide" id="agendar-btn">
+                  <button class="btn btn-outline-primary btn-to-hide step-btn" href="#!" data-index="3"
+                    id="agendar-btn">
                     Agendar
                     <i class="fas fa-arrow-right fa-fw"></i>
                   </button>
+                </div>
+                <div class="step d-none" id="step-3">
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Confirmar cita</h2>
+                  <div class="col-lg-8 m-auto">
+                    <div class="text-center"><i class="fas fa-check-circle"></i></div>
+                    <div class="confirmar-cita">
+                      <p>Aqui van los datos del doctor</p>
+                      <p>Aqui van los datos del paciente</p>
+                      <p>Aqui van los datos de la orden de trabajo</p>
+                      <p>Aqui van los datos de la fecha y horario</p>
+                    </div>
+                  </div>
+
+                  <button class="btn btn-outline-primary step-btn btn-to-hide" href="#!" data-index="2">
+                    Anterior
+                    <i class="fas fa-arrow-left fa-fw"></i>
+                  </button>
+                  <button class="btn btn-outline-primary step-btn btn-to-hide" href="#!" data-index="4">
+                    Confirmar
+                    <i class="fas fa-arrow-right fa-fw"></i>
+                  </button>
+
+                </div>
+                <div class="step d-none" id="step-4">
+                  <div class="text-center"><i class="fas fa-check-circle"></i></div>
+                  <div class="col-lg-8 m-auto">
+                    <p class="mb-4"><strong>¡Gracias!</strong> Nos pondremos en contacto.</p>
+                  </div>
+
+                  <button class="btn btn-outline-primary step-btn btn-to-hide" data-bs-dismiss="modal"
+                    aria-label="Close">
+                    Cerrar
+                    <i class="fas fa-times"></i>
+                  </button>
+
+
                 </div>
               </div>
             </div>
@@ -1268,6 +1306,7 @@
   <script src="js/calendar.js"></script>
   <script src="js/app.js"></script>
   <script src="js/validation.js"></script>
+  <script src="js/agendar-modal.js"></script>
 </body>
 
 </html>
