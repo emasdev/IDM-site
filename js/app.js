@@ -1,4 +1,5 @@
 $(function() {
+  var needValidation = true;
   $("#calendario").simpleCalendar({
     months: [
       "Enero",
@@ -56,11 +57,13 @@ $(function() {
 
         var hora = null;
         var minutos = null;
+        var form = null;
         $(".event-wrapper").html(html);
         addEventListeners();
 
         function addEventListeners() {
           console.log("AddEventListeners");
+          form = document.getElementById("form-horarios");
 
           $("#select-hora").change(function() {
             hora = $(this).val();
@@ -71,30 +74,41 @@ $(function() {
             print();
           });
 
+          // form.submit(function() {
+          //   console.log($(this));
+          // });
+
+          form.addEventListener(
+            "submit",
+            function(event) {
+              event.preventDefault();
+              event.stopPropagation();
+              validate();
+            },
+            false
+          );
+
           function print() {
             console.log(calendar);
             $("#cita-hora").html(hora);
             $("#cita-minutos").html(minutos);
+            if (hora && minutos) {
+              validate();
+            }
           }
 
           function validate() {
-            $("#form-horarios").addEventListener(
-              "submit",
-              function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                if (needValidation) {
-                  if (!form.checkValidity()) {
-                    console.log("is Valid");
-                  } else {
-                    console.log("is Not Valid");
-                  }
-                  form.classList.add("was-validated");
-                } else {
-                }
-              },
-              false
-            );
+            if (needValidation) {
+              if (form.checkValidity()) {
+                console.log("is Valid");
+                $("#agendar-btn").show();
+              } else {
+                $("#agendar-btn").hide();
+                console.log("is Not Valid");
+              }
+              form.classList.add("was-validated");
+            } else {
+            }
           }
         }
       }).fail(function() {
@@ -110,37 +124,4 @@ $(function() {
     $(".event-wrapper").html(html);
     $(".btn-to-hide").hide();
   });
-
-  //generateDientes(document.getElementById("dientes"));
-
-  function generateDientes(container) {
-    const num_dientes = 16;
-    const rows = [2];
-    var html = "";
-
-    appendHeader();
-    appendRow();
-    $.each(rows, function(index, value) {});
-
-    appendFooter();
-
-    function appendHeader() {
-      html += "";
-    }
-
-    function appendRow() {
-      html +=
-        '<div class=" d-flex flex-column text-center align-items-center">';
-      $;
-    }
-    function appendFooter() {
-      html += "</div>";
-    }
-    function appendDiente() {
-      html +=
-        '        <input class="form-check-input" type="checkbox" value="" id="diente1"><label class="form-check-label" for="diente1">diente1</label>';
-    }
-
-    container.innerHTML = html;
-  }
 });
