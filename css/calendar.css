@@ -179,3 +179,7 @@
   background-color: #d0e6ff;
   transform: translate(-50%, -50%);
 }
+
+.horarios-wrapper {
+  text-transform: none;
+}

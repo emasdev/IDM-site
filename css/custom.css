@@ -80,6 +80,11 @@
 
 .event-container {
   color: white;
+  border-radius: 15px;
+}
+
+.event-wrapper {
+  text-transform: none;
 }
 
 .centrar {
@@ -88,6 +93,28 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+.bg-horarios {
+  background-color: #d0e6ff;
+  text-transform: none;
+}
+
+#form-horarios {
+  margin: 2rem 0;
+}
+
+.data {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #ffffff;
+  color: black;
+  text-transform: none;
+  border-radius: 15px;
+}
+
+.cita-fecha {
+  margin: 0.5rem;
 }
 /* 
 #header {
