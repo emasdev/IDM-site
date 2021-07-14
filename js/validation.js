@@ -1,5 +1,5 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
+(function() {
   "use strict";
 
   var needValidation = false;
@@ -7,10 +7,10 @@
   var forms = document.querySelectorAll(".needs-validation");
 
   // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function (form) {
+  Array.prototype.slice.call(forms).forEach(function(form) {
     form.addEventListener(
       "submit",
-      function (event) {
+      function(event) {
         event.preventDefault();
         event.stopPropagation();
         if (needValidation) {
@@ -29,7 +29,7 @@
     );
   });
 
-  $(".step-btn").click(function () {
+  $(".step-btn").click(function() {
     tabToStep($(this).data("index"));
   });
 
@@ -40,7 +40,7 @@
     console.log(stepElm);
     $(stepElm).show();
   }
-  $("#contact-modal").on("show.bs.modal", function (event) {
+  $("#contact-modal").on("show.bs.modal", function(event) {
     $(".step").hide();
     $(".btn-to-hide").show();
     $("#agendar-btn").hide();

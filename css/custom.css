@@ -117,6 +117,11 @@
   margin-top: 0.7rem;
   margin-bottom: 0.5rem;
 }
+
+#step-3 .group {
+  text-align: left;
+}
+
 /* 
 #header {
   background-image: url("../assets/img/logo-2.png");
