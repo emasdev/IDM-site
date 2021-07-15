@@ -2,7 +2,7 @@
 (function() {
   "use strict";
 
-  var needValidation = false;
+  var needValidation = true;
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
 

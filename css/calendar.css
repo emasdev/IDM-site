@@ -183,3 +183,9 @@
 .horarios-wrapper {
   text-transform: none;
 }
+
+#step-4 .fa-check-circle {
+  font-size: 3rem;
+  color: #439bff;
+  margin-bottom: 2rem;
+}
