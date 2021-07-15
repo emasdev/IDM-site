@@ -701,7 +701,7 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input required type="tel" class="form-control" name="doctor-telefono"
+                            <input required type="tel" class="form-control" id="doctor-telefono" name="doctor-telefono"
                               placeholder="Teléfono" />
                             <label for="doctor-telefono">Teléfono</label>
                           </div>
@@ -733,14 +733,15 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input required type="tel" class="form-control" name="paciente-telefono"
-                              placeholder="Teléfono" />
+                            <input required type="tel" id="paciente-telefono" class="form-control"
+                              name="paciente-telefono" placeholder="Teléfono" />
                             <label for="paciente-telefono">Teléfono</label>
                           </div>
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="paciente-email" placeholder="Email" />
+                            <input type="email" class="form-control" id="paciente-email" name="paciente-email"
+                              placeholder="Email" />
                             <label for="paciente-email">Email</label>
                           </div>
                         </div>
@@ -767,111 +768,97 @@
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault1" />
-                                <label class="form-check-label" for="flexRadioDefault1">RX Panorámica</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX Panorámica</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX Lateral de cráneo 3/4</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX Lateral de cráneo
+                                  3/4</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">Con plomada</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Con plomada</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX Lateral de cráneo
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX Lateral de cráneo
                                   completo</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">Con plomada</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Con plomada</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX AP de cráneo</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX AP de cráneo</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">Waters</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Waters</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX PA de cráneo</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX PA de cráneo</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">Caldwell</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Caldwell</label>
                               </div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX ATM (boca
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX ATM (boca
                                   abierta/cerrada)</label>
                               </div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">Senos paranasales (3
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Senos paranasales (3
                                   proyecciones) Lateral, PA, Waters</label>
                               </div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX Oclusal</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX Oclusal</label>
                               </div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX Carpal</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX Carpal</label>
                               </div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">Serie RX Periapacal completa
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Serie RX Periapacal completa
                                   (14)</label>
                               </div>
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="flexRadioDefault"
-                                  id="flexRadioDefault2" />
-                                <label class="form-check-label" for="flexRadioDefault2">RX Periapacal individual</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">RX Periapacal individual</label>
                               </div>
                             </div>
                             <!-- <div class="col-12">
@@ -1019,20 +1006,20 @@
                             </div>
                             <div class="col-12">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Fotografias" id="Fotografias1" />
-                                <label class="form-check-label" for="Fotografias1">Intraoral</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Intraoral</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Fotografias" id="Fotografias1" />
-                                <label class="form-check-label" for="Fotografias1">Extraorales</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Extraorales</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="Fotografias" id="Fotografias1" />
-                                <label class="form-check-label" for="Fotografias1">Análisis Facial</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Análisis Facial</label>
                               </div>
                             </div>
                           </div>
@@ -1042,30 +1029,26 @@
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="ModelosDeEstudio"
-                                  id="ModelosDeEstudio1" />
-                                <label class="form-check-label" for="ModelosDeEstudio1">Caja cartón</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Caja cartón</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="ModelosDeEstudio"
-                                  id="ModelosDeEstudio1" />
-                                <label class="form-check-label" for="ModelosDeEstudio1">Caja plástico</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Caja plástico</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="ModelosDeEstudio"
-                                  id="ModelosDeEstudio1" />
-                                <label class="form-check-label" for="ModelosDeEstudio1">Modelo 3D Digital</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Modelo 3D Digital</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="ModelosDeEstudio"
-                                  id="ModelosDeEstudio1" />
-                                <label class="form-check-label" for="ModelosDeEstudio1">Modelo 3D Impreso</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Modelo 3D Impreso</label>
                               </div>
                             </div>
                           </div>
@@ -1079,14 +1062,12 @@
                               <div class="d-flex">
                                 <label class="mr-4">Estudio Ortodóntico Completo</label>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                    id="PaquetesCompletos1" />
-                                  <label class="form-check-label" for="PaquetesCompletos1">2D</label>
+                                  <input class="form-check-input" type="checkbox" />
+                                  <label class="form-check-label">2D</label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                    id="PaquetesCompletos1" />
-                                  <label class="form-check-label" for="PaquetesCompletos1">3D</label>
+                                  <input class="form-check-input" type="checkbox" />
+                                  <label class="form-check-label">3D</label>
                                 </div>
                               </div>
                             </div>
@@ -1094,14 +1075,12 @@
                               <div class="d-flex">
                                 <label class="mr-4">Estudio Rinoplastia Completo</label>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                    id="PaquetesCompletos1" />
-                                  <label class="form-check-label" for="PaquetesCompletos1">2D</label>
+                                  <input class="form-check-input" type="checkbox" />
+                                  <label class="form-check-label">2D</label>
                                 </div>
                                 <div class="form-check">
-                                  <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                    id="PaquetesCompletos1" />
-                                  <label class="form-check-label" for="PaquetesCompletos1">3D</label>
+                                  <input class="form-check-input" type="checkbox" />
+                                  <label class="form-check-label">3D</label>
                                 </div>
                               </div>
                             </div>
@@ -1112,44 +1091,38 @@
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                  id="PaquetesCompletos1" />
-                                <label class="form-check-label" for="PaquetesCompletos1">Ricketts</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Ricketts</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                  id="PaquetesCompletos1" />
-                                <label class="form-check-label" for="PaquetesCompletos1">Ricketts Frontal</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Ricketts Frontal</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                  id="PaquetesCompletos1" />
-                                <label class="form-check-label" for="PaquetesCompletos1">Steiner</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Steiner</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                  id="PaquetesCompletos1" />
-                                <label class="form-check-label" for="PaquetesCompletos1">Bjork - Jarabak</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Bjork - Jarabak</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                  id="PaquetesCompletos1" />
-                                <label class="form-check-label" for="PaquetesCompletos1">Mc Namara</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Mc Namara</label>
                               </div>
                             </div>
                             <div class="col-6">
                               <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="PaquetesCompletos"
-                                  id="PaquetesCompletos1" />
-                                <label class="form-check-label" for="PaquetesCompletos1">Otro</label>
+                                <input class="form-check-input" type="checkbox" />
+                                <label class="form-check-label">Otro</label>
                               </div>
                             </div>
                           </div>
@@ -1284,30 +1257,8 @@
                           <div class="col-12">
                             <h4 class="">Orden de estudio</h4>
                           </div>
-                          <div class="row py-3 m-2 group text-start">
-                            <div class="col-12">
-                              <p class="categoria-label">Categoria</p>
-                            </div>
-                            <div class="form-check">
-                              <svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false"
-                                data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512" data-fa-i2svg="">
-                                <path fill="currentColor"
-                                  d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                                </path>
-                              </svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com -->
-                              <label class="form-check-label">Estudio 1</label>
-                            </div>
-                            <div class="form-check">
-                              <svg class="svg-inline--fa fa-check fa-w-16" aria-hidden="true" focusable="false"
-                                data-prefix="fas" data-icon="check" role="img" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512" data-fa-i2svg="">
-                                <path fill="currentColor"
-                                  d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z">
-                                </path>
-                              </svg><!-- <i class="fas fa-check"></i> Font Awesome fontawesome.com -->
-                              <label class="form-check-label">Estudio 2</label>
-                            </div>
+                          <div class="col-12" id="confirmar-orden-estudio">
+
                           </div>
                         </div>
                       </div>
@@ -1359,7 +1310,6 @@
   <script src="js/calendar.js"></script>
   <script src="js/app.js"></script>
   <script src="js/validation.js"></script>
-  <script src="js/agendar-modal.js"></script>
 </body>
 
 </html>

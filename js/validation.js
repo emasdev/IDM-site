@@ -35,6 +35,8 @@
 
   function tabToStep(index) {
     if (index == 1) {
+      print();
+
       function print() {
         // obtener datos
         const doctor = {
@@ -47,23 +49,43 @@
         var nombre = doctor.nombre + " " + doctor.apellidos;
 
         $("#confirmar-doctor").find(".nombre-label").html(nombre);
+        console.log("doctor");
+        console.log(doctor);
         $("#confirmar-doctor").find(".email-label").html(doctor.email);
         $("#confirmar-doctor").find(".telefono-label").html(doctor.telefono);
+
+        const paciente = {
+          nombre: $("#paciente-nombre").val(),
+          apellidos: $("#paciente-apellidos").val(),
+          telefono: $("#paciente-telefono").val(),
+          email: $("#paciente-email").val()
+        };
+
+        nombre = paciente.nombre + " " + paciente.apellidos;
+
+        $("#confirmar-paciente").find(".nombre-label").html(nombre);
+        $("#confirmar-paciente").find(".email-label").html(paciente.email);
+        $("#confirmar-paciente")
+          .find(".telefono-label")
+          .html(paciente.telefono);
+
+        const estudio = {};
       }
-
-      const paciente = {
-        nombre: $("#paciente-nombre").val(),
-        apellidos: $("#paciente-apellidos").val(),
-        telefono: $("#paciente-telefono").val(),
-        email: $("#paciente-email").val()
-      };
-
-      nombre = paciente.nombre + " " + paciente.apellidos;
-
-      $("#confirmar-paciente").find(".nombre-label").html(nombre);
-      $("#confirmar-paciente").find(".email-label").html(paciente.email);
-      $("#confirmar-paciente").find(".telefono-label").html(paciente.telefono);
+    } else if (index == 2) {
+      const checkboxes = $("#orden-estudio").find(".form-check-input");
+      var html = "<ul>";
+      $.each(checkboxes, function(index, value) {
+        const checkbox = value;
+        if (checkbox.checked) {
+          var val = checkbox.nextSibling.nextSibling.innerHTML;
+          html += "<li>" + val + "</i>";
+        }
+      });
+      html += "</ul>";
+      $("#confirmar-orden-estudio").html(html);
+      console.log("validate orden de estudio");
     }
+
     const stepElm = "#step-" + index;
     $(".step").hide();
     $(".step").removeClass("d-none");
