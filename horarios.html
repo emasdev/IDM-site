@@ -31,8 +31,8 @@
     <div class="event-wrapper">
       <h3>Seleccionar horario de cita</h3>
       <form class='row needs-validation' id='form-horarios' novalidate>
-        <div class='col-md-6'>
-          <select id='select-hora' class='form-select text-center' aria-label='Default select example'>
+        <div class='col-md-6'> <select id='select-hora' class='form-select text-center'
+            aria-label='Default select example'>
             <option disabled selected>-- Hora --</option>
             <option value='9'>9</option>
             <option value='10'>10</option>
@@ -44,26 +44,24 @@
             <option value='16'>16</option>
             <option value='17'>17</option>
             <option value='18'>18</option>
-          </select>
-        </div>
-        <div class='col-md-6'>
-          <select id='select-minutos' class='form-select text-center' aria-label='Default select example'>
+          </select> </div>
+        <div class='col-md-6'> <select id='select-minutos' class='form-select text-center'
+            aria-label='Default select example'>
             <option disabled selected>-- Minutos --</option>
             <option value='00'>00</option>
+            <option value='15'>15</option>
             <option value='30'>30</option>
-          </select>
-        </div>
+            <option value='45'>45</option>
+          </select> </div>
         <div class='col-md-12'>
           <div class='data'>
             <div>Su cita será programada para el día</div>
-            <div><strong><span id='cita-fecha-label'>12-24-2020</span></strong></div>
-            <div>a las
-              <span id='cita-hora'></span>:
-              <span id='cita-minutos'></span> hrs.
-            </div>
+            <div class='cita-fecha'><strong><span id='cita-fecha-label'>12-24-2020</span></strong></div>
+            <div>a las <span id='cita-hora'></span>: <span id='cita-minutos'></span> hrs. </div>
           </div>
         </div>
       </form>
+
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
@@ -98,7 +96,7 @@
         var dd = String(date.getDate()).padStart(2, "0");
         var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
         var yyyy = date.getFullYear();
-        var html = mm + "/" + dd + "/" + yyyy;
+        var html = dd + "/" + mm + "/" + yyyy;
         $("#cita-fecha-label").html(html);
       }
     });

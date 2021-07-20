@@ -1,5 +1,5 @@
-$(function () {
-  var needValidation = false;
+$(function() {
+  var needValidation = true;
   $("#calendario").simpleCalendar({
     months: [
       "Enero",
@@ -13,17 +13,31 @@ $(function () {
       "Septiembre",
       "Octubre",
       "Noviembre",
-      "Diciembre",
+      "Diciembre"
     ],
-    days: ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
-    onDateSelect: function (date, events) {
+    days: [
+      "Domingo",
+      "Lunes",
+      "Martes",
+      "Miercoles",
+      "Jueves",
+      "Viernes",
+      "Sabado"
+    ],
+    onDateSelect: function(date, events) {
+      if (date.getDay() == 6) {
+        $(".to-disable").prop("disabled", true);
+      } else {
+        $(".to-disable").prop("disabled", false);
+      }
       printDate();
 
       function printDate() {
-        var dd = String(date.getDate()).padStart(2, "0");
-        var mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
-        var yyyy = date.getFullYear();
-        var html = dd + "/" + mm + "/" + yyyy;
+        const dd = String(date.getDate()).padStart(2, "0");
+        const mm = String(date.getMonth() + 1).padStart(2, "0"); //January is 0!
+        const yyyy = date.getFullYear();
+        const html = dd + "/" + mm + "/" + yyyy;
+
         $("#cita-fecha-label").html(html);
       }
       // var html = "<div>Paciente</div>";
@@ -40,10 +54,10 @@ $(function () {
       //   "apellidos": $("#paciente-apellidos"),
       // }
     },
-    onInit: function (calendar) {
+    onInit: function(calendar) {
       console.log("on init");
       var html = "";
-      $.getJSON("select_horarios.json", function (data) {
+      $.getJSON("select_horarios.json", function(data) {
         console.log(data);
         html = data.html;
 
@@ -57,11 +71,11 @@ $(function () {
           console.log("AddEventListeners");
           form = document.getElementById("form-horarios");
 
-          $("#select-hora").change(function () {
+          $("#select-hora").change(function() {
             hora = $(this).val();
             print();
           });
-          $("#select-minutos").change(function () {
+          $("#select-minutos").change(function() {
             minutos = $(this).val();
             print();
           });
@@ -72,7 +86,7 @@ $(function () {
 
           form.addEventListener(
             "submit",
-            function (event) {
+            function(event) {
               event.preventDefault();
               event.stopPropagation();
               validate();
@@ -103,10 +117,10 @@ $(function () {
             }
           }
         }
-      }).fail(function () {
+      }).fail(function() {
         console.log("An error has occurred.");
       });
       console.log(html);
-    },
+    }
   });
 });

@@ -1,5 +1,31 @@
-<label for="hora-cita">Elije el horario que más le convenga y lo confirmaremos disponibilidad:</label>
-
-<input type="time" class="form-control" id="hora-cita" name="hora-cita" min="09:00" max="19:00" step="9000" required />
-
-<small>Estamos abiertos de 09:00 a 19:00</small>
+<h3>Seleccionar horario de cita</h3>
+<form class='row needs-validation' id='form-horarios' novalidate>
+  <div class='col-md-6'> <select id='select-hora' class='form-select text-center' aria-label='Default select example'>
+      <option disabled selected>-- Hora --</option>
+      <option value='9'>9</option>
+      <option value='10'>10</option>
+      <option value='11'>11</option>
+      <option value='12'>12</option>
+      <option value='13' class='to-disable'>13</option>
+      <option value='14' class='to-disable'>14</option>
+      <option value='15' class='to-disable'>15</option>
+      <option value='16' class='to-disable'>16</option>
+      <option value='17' class='to-disable'>17</option>
+      <option value='18' class='to-disable'>18</option>
+    </select> </div>
+  <div class='col-md-6'> <select id='select-minutos' class='form-select text-center'
+      aria-label='Default select example'>
+      <option disabled selected>-- Minutos --</option>
+      <option value='00'>00</option>
+      <option value='15'>15</option>
+      <option value='30'>30</option>
+      <option value='45'>45</option>
+    </select> </div>
+  <div class='col-md-12'>
+    <div class='data'>
+      <div>Su cita será programada para el día</div>
+      <div class='cita-fecha'><strong><span id='cita-fecha-label'>12-24-2020</span></strong></div>
+      <div>a las <span id='cita-hora'></span>: <span id='cita-minutos'></span> hrs. </div>
+    </div>
+  </div>
+</form>

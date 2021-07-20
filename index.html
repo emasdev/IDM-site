@@ -40,13 +40,14 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Pedir Informes</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#!" data-bs-toggle="modal"
+              data-bs-target="#short-contact-modal">Pedir Informes</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Llamar Ahora</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="tel:+52-55-5524-4685">Llamar Ahora</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
-            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#contact">Cómo Llegar</a>
+            <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">Cómo Llegar</a>
           </li>
         </ul>
       </div>
@@ -134,8 +135,7 @@
   <!-- Boton de agendar cita -->
   <div class="container text-center mb-4">
     <!-- Masthead Heading-->
-    <a class="btn btn-xl btn-outline-primary mt-4 cta" data-bs-toggle="modal" data-bs-target="#contact-modal"
-      href="https://startbootstrap.com/theme/freelancer/">
+    <a class="btn btn-xl btn-outline-primary mt-4 cta" data-bs-toggle="modal" data-bs-target="#contact-modal">
       <i class="fas fa-download me-2"></i>
       Agenda tu cita
     </a>
@@ -148,12 +148,12 @@
     </div>
     <!-- Masthead Subheading-->
     <p class="masthead-subheading font-weight-light mb-0">
-      IDM, Imagen & Diagnóstico Maxilofacial cuenta con personal cualificado y con amplia experiencia atendiendo todo
+      IDM, Imagen & Diagnóstico Maxilofacial cuenta con personal cualificado con amplia experiencia atendiendo todo
       tipo de pacientes (infantiles, adultos mayores, personas con capacidades diferentes, etc.)
     </p>
   </div>
   <!-- About Section-->
-  <section class="page-section bg-primary text-primary mb-0" id="about">
+  <section class="page-section bg-primary text-primary mb-0">
     <div class="container">
       <!-- About Section Heading-->
       <h2 class="page-section-heading text-center text-uppercase text-primary">Nosotros</h2>
@@ -276,7 +276,7 @@
   </section>
 
   <!-- Map and info Section-->
-  <section class="page-section bg-primary text-primary mb-0" id="about">
+  <section class="page-section bg-primary text-primary mb-0">
     <div class="container">
       <!-- About Section Heading-->
       <h2 class="page-section-heading text-center text-uppercase text-primary">Testimonios</h2>
@@ -336,10 +336,11 @@
       <div class="row mt-2">
         <div class="d-flex justify-content-around">
           <a class="text-primary mr-2" jslog="66412; track:impression,click;"
-            href="https://search.google.com/local/writereview?placeid=ChIJgZRy773_0YURtdYmmj_IoE8"
-            rel="noreferrer">Escribe un comentario</a>
+            href="https://search.google.com/local/writereview?placeid=ChIJgZRy773_0YURtdYmmj_IoE8" rel="noreferrer"
+            target="_blank">Escribe un comentario</a>
           <a class="text-primary ml-2" jslog="66413; track:impression,click;"
-            href="https://search.google.com/local/reviews?placeid=ChIJgZRy773_0YURtdYmmj_IoE8" rel="noreferrer">Más
+            href="https://search.google.com/local/reviews?placeid=ChIJgZRy773_0YURtdYmmj_IoE8" rel="noreferrer"
+            target="_blank">Más
             información</a>
         </div>
       </div>
@@ -662,7 +663,7 @@
       </div>
     </div>
   </div>
-  <!-- Portfolio Modal 7-->
+  <!-- Agenda Modal -->
   <div class="portfolio-modal modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contact-modal"
     aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -702,7 +703,7 @@
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
                             <input required type="tel" class="form-control" id="doctor-telefono" name="doctor-telefono"
-                              placeholder="Teléfono" />
+                              placeholder="Teléfono" min="10" max="10" />
                             <label for="doctor-telefono">Teléfono</label>
                           </div>
                         </div>
@@ -733,7 +734,7 @@
                         </div>
                         <div class="col-lg-6">
                           <div class="form-floating mb-3">
-                            <input required type="tel" id="paciente-telefono" class="form-control"
+                            <input required type="tel" min="10" max="10" id="paciente-telefono" class="form-control"
                               name="paciente-telefono" placeholder="Teléfono" />
                             <label for="paciente-telefono">Teléfono</label>
                           </div>
@@ -1296,6 +1297,97 @@
                   </button>
 
 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Agenda Modal -->
+  <div class="portfolio-modal modal fade" id="short-contact-modal" tabindex="-1" aria-labelledby="contact-modal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center pb-5">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-12">
+                <!-- Portfolio Modal - Title-->
+                <!-- Portfolio Modal - Image-->
+                <div class="step-contacto" id="step-contacto-0">
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Pedir informes</h2>
+                  <div class="col-lg-8 m-auto">
+                    <form id="datos-contacto" class="needs-validation" novalidate>
+                      <div class="row pt-3 my-4 group">
+                        <div class="col-12">
+                          <h4 class="text-start">Contacto</h4>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input required type="text" class="form-control" name="contacto-nombre" id="contacto-nombre"
+                              placeholder="Nombre" />
+                            <label for="contacto-nombre">Nombre</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input required type="text" class="form-control" name="contacto-apellidos"
+                              id="contacto-apellidos" placeholder="Apellidos" />
+                            <label for="contacto-apellidos">Apellidos</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input required type="tel" min="10" max="10" id="contacto-telefono" class="form-control"
+                              name="contacto-telefono" placeholder="Teléfono" />
+                            <label for="contacto-telefono">Teléfono</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="contacto-email" name="contacto-email"
+                              placeholder="Email" />
+                            <label for="contacto-email">Email</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <div class="form-floating mb-3">
+                            <input required type="text" class="form-control" id="contacto-message"
+                              name="contacto-message" placeholder="Mensaje" />
+                            <label for="contacto-message">Mensaje</label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-4">Ingresar datos.</p>
+                  <button class="btn btn-outline-primary" type="submit" form="datos-contacto" id="contacto-submit">
+                    Siguiente
+                    <i class="fas fa-arrow-right fa-fw"></i>
+                  </button>
+                </div>
+                <div class="step-contacto d-none" id="step-contacto-1">
+                  <div class="text-center"><i class="fas fa-check-circle"></i></div>
+                  <div class="col-lg-8 m-auto">
+                    <p class="mb-4">
+                      <strong style="
+                      margin-right: 5px;
+                  ">Gracias </strong> En breve nos comunicáremos con usted
+                    </p>
+                  </div>
+
+                  <button class="btn btn-outline-primary btn-to-hide mt-3" data-bs-dismiss="modal" aria-label="Close">
+                    Cerrar
+                    <i class="fas fa-times"></i>
+                  </button>
                 </div>
               </div>
             </div>
