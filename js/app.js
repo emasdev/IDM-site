@@ -26,9 +26,9 @@ $(function() {
     ],
     onDateSelect: function(date, events) {
       if (date.getDay() == 6) {
-        $(".to-disable").prop("disabled", true);
+        $(".to-disable").hide();
       } else {
-        $(".to-disable").prop("disabled", false);
+        $(".to-disable").show();
       }
       printDate();
 
@@ -39,6 +39,7 @@ $(function() {
         const html = dd + "/" + mm + "/" + yyyy;
 
         $("#cita-fecha-label").html(html);
+        $("#cita-fecha-label-confirmar").html(html);
       }
       // var html = "<div>Paciente</div>";
       // html += "<div><strong>" + $("#paciente-nombre").val() + $("#paciente-apellidos").val() + "</strong></div>";
@@ -98,6 +99,8 @@ $(function() {
             console.log(calendar);
             $("#cita-hora").html(hora);
             $("#cita-minutos").html(minutos);
+            $("#cita-hora-confirmar").html(hora);
+            $("#cita-minutos-confirmar").html(minutos);
             if (hora && minutos) {
               validate();
             }

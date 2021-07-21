@@ -19,7 +19,6 @@
             if (form.id == "datos-doctor") {
               tabToStep(1);
             } else if (form.id == "datos-contacto") {
-              console.log("show next step contacto");
               const stepElm = "#step-contacto-1";
               $(".step-contacto").hide();
               $(".step-contacto").removeClass("d-none");
@@ -42,6 +41,10 @@
 
   function tabToStep(index) {
     if (index == 1) {
+      if($(".event-container").is(":visible")){
+        $("#calendario").find(".close").trigger("click");
+        return;
+      }
       print();
 
       function print() {
@@ -85,7 +88,12 @@
         const checkbox = value;
         if (checkbox.checked) {
           var val = checkbox.nextSibling.nextSibling.innerHTML;
-          html += "<li>" + val + "</i>";
+          console.log(checkbox.classList.contains("diente"));
+          if(checkbox.classList.contains("diente")){
+            html += "<li> RX Periapical individual: " + val + "</i>";
+          } else {
+            html += "<li>" + val + "</i>";
+          }
         }
       });
       html += "</ul>";
