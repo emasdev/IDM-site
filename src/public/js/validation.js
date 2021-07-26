@@ -1,5 +1,5 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
+(function () {
   "use strict";
 
   var needValidation = true;
@@ -7,10 +7,10 @@
   var forms = document.querySelectorAll(".needs-validation");
 
   // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function(form) {
+  Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(
       "submit",
-      function(event) {
+      function (event) {
         event.preventDefault();
         event.stopPropagation();
         if (needValidation) {
@@ -19,11 +19,33 @@
             if (form.id == "datos-doctor") {
               tabToStep(1);
             } else if (form.id == "datos-contacto") {
-              const stepElm = "#step-contacto-1";
-              $(".step-contacto").hide();
-              $(".step-contacto").removeClass("d-none");
-              console.log(stepElm);
-              $(stepElm).show();
+              const contacto = {
+                nombre: $("#contacto-nombre").val(),
+                apellidos: $("#contacto-apellidos").val(),
+                telefono: $("#contacto-telefono").val(),
+                email: $("#contacto-email").val(),
+                mensaje: $("#contacto-mensaje").val(),
+              }
+              
+              $.ajax({
+                url: '/send-email-info',
+                type: 'post',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(contacto),
+                success: function (data) {
+                  console.log(data);
+                  const stepElm = "#step-contacto-1";
+                  $(".step-contacto").hide();
+                  $(".step-contacto").removeClass("d-none");
+                  console.log(stepElm);
+                  $(stepElm).show();
+                },
+                error : function(xhr, status) {
+                  console.log(status);
+                }
+              });
+
             }
           }
           form.classList.add("was-validated");
@@ -35,13 +57,13 @@
     );
   });
 
-  $(".step-btn").click(function() {
+  $(".step-btn").click(function () {
     tabToStep($(this).data("index"));
   });
 
   function tabToStep(index) {
     if (index == 1) {
-      if($(".event-container").is(":visible")){
+      if ($(".event-container").is(":visible")) {
         $("#calendario").find(".close").trigger("click");
         return;
       }
@@ -84,12 +106,12 @@
     } else if (index == 2) {
       const checkboxes = $("#orden-estudio").find(".form-check-input");
       var html = "<ul>";
-      $.each(checkboxes, function(index, value) {
+      $.each(checkboxes, function (index, value) {
         const checkbox = value;
         if (checkbox.checked) {
           var val = checkbox.nextSibling.nextSibling.innerHTML;
           console.log(checkbox.classList.contains("diente"));
-          if(checkbox.classList.contains("diente")){
+          if (checkbox.classList.contains("diente")) {
             html += "<li> RX Periapical individual: " + val + "</i>";
           } else {
             html += "<li>" + val + "</i>";
@@ -107,7 +129,7 @@
     console.log(stepElm);
     $(stepElm).show();
   }
-  $("#contact-modal").on("show.bs.modal", function(event) {
+  $("#contact-modal").on("show.bs.modal", function (event) {
     $(".step").hide();
     $(".btn-to-hide").show();
     $("#agendar-btn").hide();
@@ -118,7 +140,7 @@
     $("#calendario").find(".close").trigger("click");
   });
 
-  $("#short-contact-modal").on("show.bs.modal", function(event) {
+  $("#short-contact-modal").on("show.bs.modal", function (event) {
     $(".step").hide();
     $("#step-0").show();
     $("#datos-contacto").trigger("reset");
