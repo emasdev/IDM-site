@@ -61,7 +61,11 @@
     tabToStep($(this).data("index"));
   });
 
+  var doctor = null
+  var paciente = null;
+  var orden_de_estudio = null;
   function tabToStep(index) {
+    console.log(index);
     if (index == 1) {
       if ($(".event-container").is(":visible")) {
         $("#calendario").find(".close").trigger("click");
@@ -71,7 +75,7 @@
 
       function print() {
         // obtener datos
-        const doctor = {
+        doctor = {
           nombre: $("#doctor-nombre").val(),
           apellidos: $("#doctor-apellidos").val(),
           telefono: $("#doctor-telefono").val(),
@@ -86,7 +90,7 @@
         $("#confirmar-doctor").find(".email-label").html(doctor.email);
         $("#confirmar-doctor").find(".telefono-label").html(doctor.telefono);
 
-        const paciente = {
+        paciente = {
           nombre: $("#paciente-nombre").val(),
           apellidos: $("#paciente-apellidos").val(),
           telefono: $("#paciente-telefono").val(),
@@ -100,12 +104,11 @@
         $("#confirmar-paciente")
           .find(".telefono-label")
           .html(paciente.telefono);
-
-        const estudio = {};
       }
     } else if (index == 2) {
       const checkboxes = $("#orden-estudio").find(".form-check-input");
       var html = "<ul>";
+      orden_de_estudio = [];
       $.each(checkboxes, function (index, value) {
         const checkbox = value;
         if (checkbox.checked) {
@@ -113,14 +116,37 @@
           console.log(checkbox.classList.contains("diente"));
           if (checkbox.classList.contains("diente")) {
             html += "<li> RX Periapical individual: " + val + "</i>";
+            orden_de_estudio.push('RX Periapical individual ' + val);
           } else {
             html += "<li>" + val + "</i>";
+            orden_de_estudio.push(val);
           }
         }
       });
       html += "</ul>";
       $("#confirmar-orden-estudio").html(html);
       console.log("validate orden de estudio");
+    } else if(index == 4) {
+      const datos = {
+        paciente: paciente,
+        doctor: doctor,
+        orden_de_estudio: orden_de_estudio,
+      }
+
+      $.ajax({
+        url: '/send-email-cita',
+        type: 'post',
+        dataType: 'json',
+        contentType: 'application/json',
+        data: JSON.stringify(datos),
+        success: function (data) {
+          console.log(data);
+        },
+        error : function(xhr, status) {
+          console.log(status);
+        }
+      });
+
     }
 
     const stepElm = "#step-" + index;

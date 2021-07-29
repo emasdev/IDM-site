@@ -62,18 +62,14 @@ router.post("/send-email-info", (req, res) => {
         .catch(error => console.log(error.message));
 });
 
-router.post("/send-email", (req, res) => {
+router.post("/send-email-cita", (req, res) => {
+
+    const { doctor, paciente, orden_de_estudio } = req.body;
     console.log(req.body);
-    const { nombre, email, telefono, mensaje } = req.body;
-    const contentHTML = `
-  <h1>Formulario IDM</h1>
-  <ul>
-    <li>nombre: ${nombre}</li>
-    <li>email: ${email}</li>
-    <li>telefono: ${telefono}</li>
-  </ul>
-  <p>${mensaje}</p>
-  `;
+
+    res.json({ status: 'probando' })
+    return;
+
 
     const CLIENT_ID =
         "149709447482-ol5t6u6asf93rkfq3q28g37shpb1ocrg.apps.googleusercontent.com";
@@ -104,7 +100,7 @@ router.post("/send-email", (req, res) => {
                 }
             });
             const mailOptions = {
-                from: "Info <info@idm-mexico.com>",
+                from: "Cita <info@idm-mexico.com>",
                 to: "estudios@idm-mexico.com",
                 subject: "IDM formulario prueba",
                 html: contentHTML

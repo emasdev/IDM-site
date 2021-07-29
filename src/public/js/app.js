@@ -41,22 +41,8 @@ $(function() {
         $("#cita-fecha-label").html(html);
         $("#cita-fecha-label-confirmar").html(html);
       }
-      // var html = "<div>Paciente</div>";
-      // html += "<div><strong>" + $("#paciente-nombre").val() + $("#paciente-apellidos").val() + "</strong></div>";
-      // html += "<div class='mt-2'>Doctor</div>";
-      // html += "<div><strong>" + $("#doctor-nombre").val() + $("#doctor-apellidos").val() + "</strong></div>";
-      // html += "<div class='mt-2'>Fecha</div><div><strong>" + textDate + "</strong></div>";
-      // html +=
-      //   '<form class="horario-cita mt-3"><input type="time" id="hora-cita" name="hora-cita" min="09:00" max="19:00" step="9000" required /><p class="mt-2">Estamos abiertos de 09:00 a 19:00</p></form>';
-      // $("#agendar-btn").show();
-      // $(".event-wrapper").html(html);
-      // var paciente = {
-      //   "nombre": $("#paciente-nombre"),
-      //   "apellidos": $("#paciente-apellidos"),
-      // }
     },
     onInit: function(calendar) {
-      console.log("on init");
       var html = "";
       $.getJSON("select_horarios.json", function(data) {
         console.log(data);
