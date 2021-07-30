@@ -93,6 +93,15 @@ router.post("/send-email-cita", (req, res) => {
         contentHTML += '</ul>';
     }
 
+    contentHTML += `
+    </br>
+    <h2>Fecha:</h2>
+    <div>${fecha.dia}</div>
+    <div>A las ${fecha.hora}:${fecha.minutos} hrs.</div>
+    `;
+
+
+
     const oAuth2Client = new google.auth.OAuth2(
         CLIENT_ID,
         CLIENT_SECRET,

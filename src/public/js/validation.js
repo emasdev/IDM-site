@@ -131,7 +131,13 @@
         paciente: paciente,
         doctor: doctor,
         orden_de_estudio: orden_de_estudio,
+        fecha: {
+          dia: $("#cita-fecha-label-confirmar").html(),
+          hora: $("#cita-hora-confirmar").html(),
+          minutos: $("#cita-minutos-confirmar").html()
+        }
       }
+
 
       $.ajax({
         url: '/send-email-cita',
