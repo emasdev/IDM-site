@@ -50,7 +50,7 @@ router.post("/send-email-info", (req, res) => {
             const mailOptions = {
                 from: "Info <info@idm-mexico.com>",
                 to: "estudios@idm-mexico.com",
-                subject: "IDM formulario prueba",
+                subject: "Solicitud de paciente",
                 html: contentHTML
             };
 
@@ -127,7 +127,7 @@ router.post("/send-email-cita", (req, res) => {
             const mailOptions = {
                 from: "Cita <info@idm-mexico.com>",
                 to: "estudios@idm-mexico.com",
-                subject: "IDM formulario prueba",
+                subject: "Solicitud de cita",
                 html: contentHTML
             };
 
