@@ -122,6 +122,12 @@
   text-align: left;
 }
 
+#datos-contacto .group {
+  -webkit-box-shadow: 4px 4px 15px -2px #c5c5c5;
+  box-shadow: 4px 4px 15px -2px #c5c5c5;
+  border-radius: 15px;
+}
+
 /* 
 #header {
   background-image: url("../assets/img/logo-2.png");

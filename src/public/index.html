@@ -4,8 +4,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="description" content="Imagen y Diagnostico Maxilofacial" />
+  <meta name="author" content="IDM" />
   <title>IDM | Imagen & Diagnostico Maxilofacial</title>
   <!-- Favicon-->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -41,7 +41,7 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="#!" data-bs-toggle="modal"
-              data-bs-target="#short-contact-modal">Pedir Informes</a>
+              data-bs-target="#contact-modal">Solicitar Cita</a>
           </li>
           <li class="nav-item mx-0 mx-lg-1">
             <a class="nav-link py-3 px-0 px-lg-3 rounded" href="tel:+52-55-5524-4685">Llamar Ahora</a>
@@ -135,10 +135,18 @@
   <!-- Boton de agendar cita -->
   <div class="container text-center mb-4">
     <!-- Masthead Heading-->
-    <a class="btn btn-xl btn-outline-primary mt-4 cta" data-bs-toggle="modal" data-bs-target="#contact-modal">
-      <i class="fas fa-download me-2"></i>
-      Agenda tu cita
-    </a>
+    <div>
+      <a class="btn btn-xl btn-outline-primary mt-4 cta" data-bs-toggle="modal" data-bs-target="#contact-modal">
+        <i class="fas fa-calendar-check me-2"></i>
+        Solicitar Cita
+      </a>
+    </div>
+    <div>
+      <a class="btn btn-xl btn-outline-secondary mt-4 cta" data-bs-toggle="modal" data-bs-target="#short-contact-modal">
+        Pedir Informes
+      </a>
+    </div>
+
 
     <!-- Icon Divider-->
     <div class="divider-custom">
@@ -165,7 +173,7 @@
       </div>
       <!-- About Section Content-->
       <div class="row text-center">
-        <div class="offset-3 col-6 mb-3">
+        <div class="offset-lg-3 col-lg-6 col-12 mb-3">
           <h3>¿Quienes sómos?</h3>
           <p class="lead">
             Somos una empresa especializada en diagnostico radiológico e imagenología, para el área de la cabeza, el
@@ -173,7 +181,7 @@
             de vanguardia y brindando una atención impecable a Doctores y Pacientes.
           </p>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-12">
           <h3 class="text-center">Nuestra Misión</h3>
           <p class="lead">
             Apoyar a los profesionales de la salud en la obtención de diagnósticos mas precisos, a través de la oferta
@@ -181,7 +189,7 @@
             altamente humano hacia el paciente.
           </p>
         </div>
-        <div class="col-6">
+        <div class="col-lg-6 col-12">
           <h3 class="text-center">Nuestra Visión</h3>
           <p class="lead">
             Ser un importante aliado de los Doctores que nos favorecen refiriendo a sus pacientes, funcionando como
@@ -690,41 +698,9 @@
 
                 <!-- Portfolio Modal - Image-->
                 <div class="step" id="step-0">
-                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Agende su cita</h2>
+                  <h2 class="portfolio-modal-title text-secondary text-uppercase mb-4">Solicitar cita</h2>
                   <div class="col-lg-8 m-auto">
                     <form id="datos-doctor" class="needs-validation" novalidate>
-                      <div class="row pt-3 group">
-                        <div class="col-12">
-                          <h4 class="text-start">Doctor</h4>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="form-floating mb-3">
-                            <input required type="text" class="form-control" name="doctor-nombre" id="doctor-nombre"
-                              placeholder="Nombre" />
-                            <label for="doctor-nombre">Nombre</label>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="form-floating mb-3">
-                            <input required type="text" class="form-control" name="doctor-apellidos"
-                              id="doctor-apellidos" placeholder="Apellidos" />
-                            <label for="doctor-apellidos">Apellidos</label>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="form-floating mb-3">
-                            <input required type="tel" class="form-control" id="doctor-telefono" name="doctor-telefono"
-                              placeholder="Teléfono" min="10" max="10" />
-                            <label for="doctor-telefono">Teléfono</label>
-                          </div>
-                        </div>
-                        <div class="col-lg-6">
-                          <div class="form-floating mb-3">
-                            <input required type="email" class="form-control" id="doctor-email" placeholder="Email" />
-                            <label for="doctor-email">Email</label>
-                          </div>
-                        </div>
-                      </div>
                       <div class="row pt-3 my-4 group">
                         <div class="col-12">
                           <h4 class="text-start">Paciente</h4>
@@ -758,6 +734,39 @@
                           </div>
                         </div>
                       </div>
+                      <div class="row pt-3 group">
+                        <div class="col-12">
+                          <h4 class="text-start">Doctor</h4>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="doctor-nombre" id="doctor-nombre"
+                              placeholder="Nombre" />
+                            <label for="doctor-nombre">Nombre</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input type="text" class="form-control" name="doctor-apellidos" id="doctor-apellidos"
+                              placeholder="Apellidos" />
+                            <label for="doctor-apellidos">Apellidos</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input type="tel" class="form-control" id="doctor-telefono" name="doctor-telefono"
+                              placeholder="Teléfono" min="10" max="10" />
+                            <label for="doctor-telefono">Teléfono</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="doctor-email" placeholder="Email" />
+                            <label for="doctor-email">Email</label>
+                          </div>
+                        </div>
+                      </div>
+
                     </form>
                   </div>
 
