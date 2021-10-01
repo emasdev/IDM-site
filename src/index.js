@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
+const httpsRedirect = require('express-https-redirect');
 const PORT = process.env.PORT || 3500;
 
 app.use(express.urlencoded({ extended: false }));
@@ -16,6 +17,8 @@ app.use(function (req, res, next) {
 });
 app.use(require("./routes/index"));
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use('/', httpsRedirect());
 
 app.listen(PORT, () => {
   console.log("Iniciar servidor puerto " + PORT);
