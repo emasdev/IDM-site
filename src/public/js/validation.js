@@ -28,7 +28,7 @@
               }
 
               $(".spinner-border").show();
-              $(".form-status").show();
+              $(".form-status").hide();
 
               $.ajax({
                 url: '/send-email-info',
@@ -43,6 +43,7 @@
                   $(stepElm).show();
                   $(".spinner-border").hide();
                   $(".form-success").show();
+                  console.log("email info success");
                 },
                 error: function (xhr, status) {
                   console.error(status);
@@ -141,7 +142,6 @@
 
       $(".spinner-border").show();
       $(".form-status").hide();
-
       $.ajax({
         url: '/send-email-cita',
         type: 'post',
@@ -151,7 +151,7 @@
         success: function (data) {
           console.log(data);
           $(".spinner-border").hide();
-          $(".form-succes").show();
+          $(".form-success").show();
         },
         error: function (xhr, status) {
           console.error(status);
