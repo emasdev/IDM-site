@@ -26,7 +26,10 @@
                 email: $("#contacto-email").val(),
                 mensaje: $("#contacto-mensaje").val(),
               }
-              
+
+              $(".spinner-border").show();
+              $(".form-status").show();
+
               $.ajax({
                 url: '/send-email-info',
                 type: 'post',
@@ -34,15 +37,17 @@
                 contentType: 'application/json',
                 data: JSON.stringify(contacto),
                 success: function (data) {
-                  console.log(data);
                   const stepElm = "#step-contacto-1";
                   $(".step-contacto").hide();
                   $(".step-contacto").removeClass("d-none");
-                  console.log(stepElm);
                   $(stepElm).show();
+                  $(".spinner-border").hide();
+                  $(".form-success").show();
                 },
-                error : function(xhr, status) {
-                  console.log(status);
+                error: function (xhr, status) {
+                  console.error(status);
+                  $(".spinner-border").hide();
+                  $(".form-error").show();
                 }
               });
 
@@ -65,7 +70,6 @@
   var paciente = null;
   var orden_de_estudio = null;
   function tabToStep(index) {
-    console.log(index);
     if (index == 1) {
       if ($(".event-container").is(":visible")) {
         $("#calendario").find(".close").trigger("click");
@@ -85,8 +89,6 @@
         var nombre = doctor.nombre + " " + doctor.apellidos;
 
         $("#confirmar-doctor").find(".nombre-label").html(nombre);
-        console.log("doctor");
-        console.log(doctor);
         $("#confirmar-doctor").find(".email-label").html(doctor.email);
         $("#confirmar-doctor").find(".telefono-label").html(doctor.telefono);
 
@@ -125,8 +127,7 @@
       });
       html += "</ul>";
       $("#confirmar-orden-estudio").html(html);
-      console.log("validate orden de estudio");
-    } else if(index == 4) {
+    } else if (index == 4) {
       const datos = {
         paciente: paciente,
         doctor: doctor,
@@ -138,6 +139,8 @@
         }
       }
 
+      $(".spinner-border").show();
+      $(".form-status").hide();
 
       $.ajax({
         url: '/send-email-cita',
@@ -147,9 +150,13 @@
         data: JSON.stringify(datos),
         success: function (data) {
           console.log(data);
+          $(".spinner-border").hide();
+          $(".form-succes").show();
         },
-        error : function(xhr, status) {
-          console.log(status);
+        error: function (xhr, status) {
+          console.error(status);
+          $(".spinner-border").hide();
+          $(".form-error").show();
         }
       });
 
@@ -158,7 +165,6 @@
     const stepElm = "#step-" + index;
     $(".step").hide();
     $(".step").removeClass("d-none");
-    console.log(stepElm);
     $(stepElm).show();
   }
   $("#contact-modal").on("show.bs.modal", function (event) {

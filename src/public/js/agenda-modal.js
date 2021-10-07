@@ -37,7 +37,6 @@
     const stepElm = "#step-" + index;
     $(".step").hide();
     $(".step").removeClass("d-none");
-    console.log(stepElm);
     $(stepElm).show();
   }
   $("#contact-modal").on("show.bs.modal", function (event) {

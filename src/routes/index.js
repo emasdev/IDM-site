@@ -13,12 +13,11 @@ const REFRESH_TOKEN =
 
 
 router.post("/send-email-info", (req, res) => {
-    console.log(req.body)
-    const { nombre, email, telefono, mensaje } = req.body;
+    const { nombre, apellidos, email, telefono, mensaje } = req.body;
     const contentHTML = `
   <h1>Formulario IDM</h1>
   <ul>
-    <li>nombre: ${nombre}</li>
+    <li>nombre: ${nombre} ${apellidos}</li>
     <li>email: ${email}</li>
     <li>telefono: ${telefono}</li>
   </ul>
@@ -56,20 +55,18 @@ router.post("/send-email-info", (req, res) => {
 
             const result = await transporter.sendMail(mailOptions);
         } catch (err) {
-            console.log(err);
+            console.error(err);
         }
     }
 
     sendMail()
         .then(result => res.json({ status: 'enviado' }))
-        .catch(error => console.log(error.message));
+        .catch(error => console.error(error.message));
 });
 
 router.post("/send-email-cita", (req, res) => {
 
     const { doctor, paciente, orden_de_estudio, fecha } = req.body;
-    console.log(req.body);
-
     var contentHTML = `
     <h2>Doctor:</h2>
     <div>Nombre: ${doctor.nombre}</div>
@@ -139,7 +136,7 @@ router.post("/send-email-cita", (req, res) => {
 
     sendMail()
         .then(result => res.json({ status: 'enviado' }))
-        .catch(error => console.log(error.message));
+        .catch(error => console.error(error.message));
 });
 
 module.exports = router;

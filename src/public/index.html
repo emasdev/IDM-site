@@ -1302,14 +1302,30 @@
 
                 </div>
                 <div class="step d-none" id="step-4">
-                  <div class="text-center"><i class="fas fa-check-circle"></i></div>
-                  <div class="col-lg-8 m-auto">
-                    <p class="mb-4">
-                      <strong style="
-                      margin-right: 5px;
-                  ">Gracias </strong></br> En breve nos comunicáremos con usted
-                    </p>
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
                   </div>
+                  <div class="form-success d-none">
+                    <div class="text-center"><i class="fas fa-check-circle"></i></div>
+                    <div class="col-lg-8 m-auto">
+                      <p class="mb-4">
+                        <strong style="
+                        margin-right: 5px;
+                    ">Gracias </strong></br> En breve nos comunicáremos con usted
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form-error d-none">
+                    <div class="text-center"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="col-lg-8 m-auto">
+                      <p class="mb-4">
+                        <strong style="
+                        margin-right: 5px;
+                    ">Error </strong></br>
+                      </p>
+                    </div>
+                  </div>
+
 
                   <button class="btn btn-outline-primary step-btn btn-to-hide mt-3" data-bs-dismiss="modal"
                     aria-label="Close">
@@ -1327,7 +1343,7 @@
     </div>
   </div>
 
-  <!-- Agenda Modal -->
+  <!-- Modal Pedir Informes -->
   <div class="portfolio-modal modal fade" id="short-contact-modal" tabindex="-1" aria-labelledby="contact-modal"
     aria-hidden="true">
     <div class="modal-dialog modal-xl">
@@ -1396,13 +1412,28 @@
                   </button>
                 </div>
                 <div class="step-contacto d-none" id="step-contacto-1">
-                  <div class="text-center"><i class="fas fa-check-circle"></i></div>
-                  <div class="col-lg-8 m-auto">
-                    <p class="mb-4">
-                      <strong style="
-                      margin-right: 5px;
-                  ">Gracias </strong></br> En breve nos comunicáremos con usted
-                    </p>
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                  </div>
+                  <div class="form-success form-status d-none">
+                    <div class="text-center"><i class="fas fa-check-circle"></i></div>
+                    <div class="col-lg-8 m-auto">
+                      <p class="mb-4">
+                        <strong style="
+                        margin-right: 5px;
+                    ">Gracias </strong></br> En breve nos comunicáremos con usted
+                      </p>
+                    </div>
+                  </div>
+                  <div class="form-error form-status d-none">
+                    <div class="text-center"><i class="fas fa-exclamation-triangle"></i></div>
+                    <div class="col-lg-8 m-auto">
+                      <p class="mb-4">
+                        <strong style="
+                        margin-right: 5px;
+                    ">Error </strong></br>
+                      </p>
+                    </div>
                   </div>
 
                   <button class="btn btn-outline-primary btn-to-hide mt-3" data-bs-dismiss="modal" aria-label="Close">

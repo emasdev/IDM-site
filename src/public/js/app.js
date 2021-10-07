@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   var needValidation = true;
   $("#calendario").simpleCalendar({
     months: [
@@ -24,7 +24,7 @@ $(function() {
       "Viernes",
       "Sabado"
     ],
-    onDateSelect: function(date, events) {
+    onDateSelect: function (date, events) {
       if (date.getDay() == 6) {
         $(".to-disable").hide();
       } else {
@@ -42,10 +42,9 @@ $(function() {
         $("#cita-fecha-label-confirmar").html(html);
       }
     },
-    onInit: function(calendar) {
+    onInit: function (calendar) {
       var html = "";
-      $.getJSON("select_horarios.json", function(data) {
-        console.log(data);
+      $.getJSON("select_horarios.json", function (data) {
         html = data.html;
 
         var hora = null;
@@ -55,14 +54,13 @@ $(function() {
         addEventListeners();
 
         function addEventListeners() {
-          console.log("AddEventListeners");
           form = document.getElementById("form-horarios");
 
-          $("#select-hora").change(function() {
+          $("#select-hora").change(function () {
             hora = $(this).val();
             print();
           });
-          $("#select-minutos").change(function() {
+          $("#select-minutos").change(function () {
             minutos = $(this).val();
             print();
           });
@@ -73,7 +71,7 @@ $(function() {
 
           form.addEventListener(
             "submit",
-            function(event) {
+            function (event) {
               event.preventDefault();
               event.stopPropagation();
               validate();
@@ -82,7 +80,6 @@ $(function() {
           );
 
           function print() {
-            console.log(calendar);
             $("#cita-hora").html(hora);
             $("#cita-minutos").html(minutos);
             $("#cita-hora-confirmar").html(hora);
@@ -95,21 +92,18 @@ $(function() {
           function validate() {
             if (needValidation) {
               if (form.checkValidity()) {
-                console.log("is Valid");
                 $("#agendar-btn").show();
               } else {
                 $("#agendar-btn").hide();
-                console.log("is Not Valid");
               }
               form.classList.add("was-validated");
             } else {
             }
           }
         }
-      }).fail(function() {
-        console.log("An error has occurred.");
+      }).fail(function () {
+        console.error("An error has occurred.");
       });
-      console.log(html);
     }
   });
 });
