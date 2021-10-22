@@ -150,6 +150,7 @@
         data: JSON.stringify(datos),
         success: function (data) {
           console.log(data);
+          $(stepElm).show();
           $(".spinner-border").hide();
           $(".form-success").show();
         },
