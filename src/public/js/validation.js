@@ -152,7 +152,7 @@
           console.log(data);
           $(stepElm).show();
           $(".spinner-border").hide();
-          $(".form-success").show();
+          $('.form-success').removeClass('d-none');
         },
         error: function (xhr, status) {
           console.error(status);
