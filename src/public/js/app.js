@@ -1,4 +1,5 @@
 $(function () {
+  //$("#alert-temporal-modal").modal("show");
   var needValidation = true;
   $("#calendario").simpleCalendar({
     months: [
@@ -13,7 +14,7 @@ $(function () {
       "Septiembre",
       "Octubre",
       "Noviembre",
-      "Diciembre"
+      "Diciembre",
     ],
     days: [
       "Domingo",
@@ -22,7 +23,7 @@ $(function () {
       "Miercoles",
       "Jueves",
       "Viernes",
-      "Sabado"
+      "Sabado",
     ],
     onDateSelect: function (date, events) {
       if (date.getDay() == 6) {
@@ -104,6 +105,6 @@ $(function () {
       }).fail(function () {
         console.error("An error has occurred.");
       });
-    }
+    },
   });
 });
