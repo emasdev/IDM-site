@@ -1,5 +1,6 @@
-$(function() {
+$(function () {
   var needValidation = true;
+  var selectedDate = null;
   $("#calendario").simpleCalendar({
     months: [
       "Enero",
@@ -13,7 +14,7 @@ $(function() {
       "Septiembre",
       "Octubre",
       "Noviembre",
-      "Diciembre"
+      "Diciembre",
     ],
     days: [
       "Domingo",
@@ -22,9 +23,10 @@ $(function() {
       "Miercoles",
       "Jueves",
       "Viernes",
-      "Sabado"
+      "Sabado",
     ],
-    onDateSelect: function(date, events) {
+    onDateSelect: function (date, events) {
+      selectedDate = date;
       if (date.getDay() == 6) {
         $(".to-disable").hide();
       } else {
@@ -55,12 +57,11 @@ $(function() {
       //   "apellidos": $("#paciente-apellidos"),
       // }
     },
-    onInit: function(calendar) {
+    onInit: function (calendar) {
       console.log("on init");
       var html = "";
-      $.getJSON("select_horarios.json", function(data) {
-        console.log(data);
-        html = data.html;
+      $.get("select_horarios.html", function (data) {
+        html = data;
 
         var hora = null;
         var minutos = null;
@@ -71,15 +72,18 @@ $(function() {
         function addEventListeners() {
           console.log("AddEventListeners");
           form = document.getElementById("form-horarios");
-
-          $("#select-hora").change(function() {
+          $("#select-hora").change(function () {
             hora = $(this).val();
             print();
           });
-          $("#select-minutos").change(function() {
+          $("#select-minutos").change(function () {
             minutos = $(this).val();
             print();
           });
+
+          $(document)
+            .off("developerModeLoaded.schedule")
+            .on("developerModeLoaded.schedule", validate);
 
           // form.submit(function() {
           //   console.log($(this));
@@ -87,28 +91,33 @@ $(function() {
 
           form.addEventListener(
             "submit",
-            function(event) {
+            function (event) {
               event.preventDefault();
               event.stopPropagation();
               validate();
             },
-            false
+            false,
           );
 
           function print() {
-            console.log(calendar);
-            $("#cita-hora").html(hora);
-            $("#cita-minutos").html(minutos);
-            $("#cita-hora-confirmar").html(hora);
-            $("#cita-minutos-confirmar").html(minutos);
-            if (hora && minutos) {
-              validate();
-            }
+            $("#cita-hora").html(hora || "");
+            $("#cita-minutos").html(minutos || "");
+            $("#cita-hora-confirmar").html(hora || "");
+            $("#cita-minutos-confirmar").html(minutos || "");
+            validate();
           }
 
           function validate() {
+            if (window.DEVELOPER_MODE === true) {
+              $("#agendar-btn").show();
+              return;
+            }
+
             if (needValidation) {
-              if (form.checkValidity()) {
+              var hasSelectedTime = Boolean(hora && minutos);
+              var hasSelectedDate = Boolean(selectedDate);
+
+              if (hasSelectedDate && hasSelectedTime) {
                 console.log("is Valid");
                 $("#agendar-btn").show();
               } else {
@@ -119,11 +128,21 @@ $(function() {
             } else {
             }
           }
+
+          if (!selectedDate) {
+            var now = new Date();
+            var dd = String(now.getDate()).padStart(2, "0");
+            var mm = String(now.getMonth() + 1).padStart(2, "0");
+            var yyyy = now.getFullYear();
+            $("#cita-fecha-label").html(dd + "/" + mm + "/" + yyyy);
+          }
+
+          validate();
         }
-      }).fail(function() {
+      }).fail(function () {
         console.log("An error has occurred.");
       });
       console.log(html);
-    }
+    },
   });
 });

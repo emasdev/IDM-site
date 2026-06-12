@@ -1,19 +1,23 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
-(function() {
+(function () {
   "use strict";
 
   var needValidation = true;
+  function isDeveloperModeEnabled() {
+    return window.DEVELOPER_MODE === true;
+  }
+
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
 
   // Loop over them and prevent submission
-  Array.prototype.slice.call(forms).forEach(function(form) {
+  Array.prototype.slice.call(forms).forEach(function (form) {
     form.addEventListener(
       "submit",
-      function(event) {
+      function (event) {
         event.preventDefault();
         event.stopPropagation();
-        if (needValidation) {
+        if (needValidation && !isDeveloperModeEnabled()) {
           if (!form.checkValidity()) {
           } else {
             if (form.id == "datos-doctor") {
@@ -31,17 +35,17 @@
           tabToStep(1);
         }
       },
-      false
+      false,
     );
   });
 
-  $(".step-btn").click(function() {
+  $(".step-btn").click(function () {
     tabToStep($(this).data("index"));
   });
 
   function tabToStep(index) {
     if (index == 1) {
-      if($(".event-container").is(":visible")){
+      if ($(".event-container").is(":visible")) {
         $("#calendario").find(".close").trigger("click");
         return;
       }
@@ -53,7 +57,7 @@
           nombre: $("#doctor-nombre").val(),
           apellidos: $("#doctor-apellidos").val(),
           telefono: $("#doctor-telefono").val(),
-          email: $("#doctor-email").val()
+          email: $("#doctor-email").val(),
         };
 
         var nombre = doctor.nombre + " " + doctor.apellidos;
@@ -68,7 +72,7 @@
           nombre: $("#paciente-nombre").val(),
           apellidos: $("#paciente-apellidos").val(),
           telefono: $("#paciente-telefono").val(),
-          email: $("#paciente-email").val()
+          email: $("#paciente-email").val(),
         };
 
         nombre = paciente.nombre + " " + paciente.apellidos;
@@ -84,15 +88,25 @@
     } else if (index == 2) {
       const checkboxes = $("#orden-estudio").find(".form-check-input");
       var html = "<ul>";
-      $.each(checkboxes, function(index, value) {
+      $.each(checkboxes, function (index, value) {
         const checkbox = value;
         if (checkbox.checked) {
-          var val = checkbox.nextSibling.nextSibling.innerHTML;
-          console.log(checkbox.classList.contains("diente"));
-          if(checkbox.classList.contains("diente")){
-            html += "<li> RX Periapical individual: " + val + "</i>";
+          var val = "";
+          var wrappedLabel = checkbox.closest("label");
+          if (wrappedLabel) {
+            val = wrappedLabel.textContent.trim();
+          } else if (checkbox.nextElementSibling) {
+            val = checkbox.nextElementSibling.textContent.trim();
+          }
+
+          if (!val) {
+            return;
+          }
+
+          if (checkbox.classList.contains("diente")) {
+            html += "<li>RX Periapical individual: " + val + "</li>";
           } else {
-            html += "<li>" + val + "</i>";
+            html += "<li>" + val + "</li>";
           }
         }
       });
@@ -107,7 +121,7 @@
     console.log(stepElm);
     $(stepElm).show();
   }
-  $("#contact-modal").on("show.bs.modal", function(event) {
+  $("#contact-modal").on("show.bs.modal", function (event) {
     $(".step").hide();
     $(".btn-to-hide").show();
     $("#agendar-btn").hide();
@@ -118,7 +132,7 @@
     $("#calendario").find(".close").trigger("click");
   });
 
-  $("#short-contact-modal").on("show.bs.modal", function(event) {
+  $("#short-contact-modal").on("show.bs.modal", function (event) {
     $(".step").hide();
     $("#step-0").show();
     $("#datos-contacto").trigger("reset");

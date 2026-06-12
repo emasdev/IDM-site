@@ -105,6 +105,93 @@
   margin: 2rem 0;
 }
 
+.study-order-grid {
+  row-gap: 1rem;
+}
+
+.study-card {
+  background: #ffffff;
+  border: 1px solid #dce5f0;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(26, 58, 95, 0.08);
+  padding: 1rem 1rem 0.9rem;
+  height: 100%;
+}
+
+.study-card h4 {
+  font-size: 1.85rem;
+  margin-bottom: 0.6rem;
+  color: #24374d;
+}
+
+.study-option {
+  display: block;
+  margin-bottom: 0.35rem;
+  color: #2f3f52;
+  cursor: pointer;
+}
+
+.study-option input {
+  margin-right: 0.4rem;
+}
+
+.quadrant-options {
+  display: flex;
+  gap: 1rem;
+  margin: 0.2rem 0 0.4rem;
+}
+
+.study-option-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.study-inline-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.study-text-input {
+  border: 0;
+  border-bottom: 1px solid #9fb1c7;
+  background: transparent;
+  min-width: 140px;
+  outline: none;
+}
+
+.study-notes {
+  width: 100%;
+  border: 1px solid #d4dfed;
+  border-radius: 8px;
+  padding: 0.65rem 0.75rem;
+  resize: vertical;
+}
+
+.tooth-grid {
+  margin-top: 0.4rem;
+}
+
+.tooth-row {
+  display: grid;
+  grid-template-columns: repeat(16, minmax(24px, 1fr));
+  gap: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.tooth-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.15rem;
+  font-size: 0.85rem;
+}
+
+.tooth-item .form-check-input {
+  margin-right: 0;
+}
+
 .data {
   margin-top: 2rem;
   padding: 2rem 0;
@@ -210,5 +297,18 @@ iframe {
 
   .navbar {
     position: relative;
+  }
+
+  .study-card h4 {
+    font-size: 1.5rem;
+  }
+
+  .quadrant-options {
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tooth-row {
+    grid-template-columns: repeat(8, minmax(24px, 1fr));
   }
 }

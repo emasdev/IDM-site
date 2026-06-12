@@ -1199,1059 +1199,507 @@
                       Orden de estudio
                     </h2>
                     <div class="col-lg-12 m-auto">
-                      <form id="orden-estudio">
-                        <div class="row">
-                          <div class="col col-lg-6">
-                            <div class="row py-3 m-2 group text-start">
-                              <div class="col-12">
-                                <h4 class="">Radiografia Digital 2D</h4>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
+                      <form
+                        id="orden-estudio"
+                        class="row study-order-grid g-3 text-start"
+                      >
+                        <div class="col-lg-6">
+                          <div class="study-card">
+                            <h4>Radiografía extraoral</h4>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >RX Panorámica</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX Lateral de cráneo 3/4</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Con plomada</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX Lateral de cráneo completo</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Con plomada</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX AP de cráneo</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label">Waters</label>
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX PA de cráneo</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Caldwell</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX ATM (boca abierta/cerrada)</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Senos paranasales (3 proyecciones) Lateral,
-                                    PA, Waters</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX Oclusal</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >RX Carpal</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Serie RX Periapical completa (14)</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12 mt-2">
-                                <label>RX Periapical individual</label>
-                              </div>
-                              <!-- <div class="col-12">
-                                <img class="w-100" src="assets/img/dientes.png" alt="" />
-                              </div> -->
-                              <div class="col-12">
-                                <div
-                                  id="dientes-up"
-                                  class="d-flex justify-content-around"
+                                  Panorámica</label
                                 >
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente1"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente1"
-                                    >
-                                      18
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente2"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente2"
-                                    >
-                                      17
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente2"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente2"
-                                    >
-                                      16
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente3"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente3"
-                                    >
-                                      15
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente4"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente4"
-                                    >
-                                      14
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente5"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente5"
-                                    >
-                                      13
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente6"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente6"
-                                    >
-                                      12
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente8"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente8"
-                                    >
-                                      11
-                                    </label>
-                                  </div>
-
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente10"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente10"
-                                    >
-                                      21
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente11"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente11"
-                                    >
-                                      22
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente12"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente12"
-                                    >
-                                      23
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente13"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente13"
-                                    >
-                                      24
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente14"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente14"
-                                    >
-                                      25
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente15"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente15"
-                                    >
-                                      26
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente16"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente16"
-                                    >
-                                      27
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente7"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente7"
-                                    >
-                                      28
-                                    </label>
-                                  </div>
-                                </div>
-                                <div
-                                  id="dientes-down"
-                                  class="d-flex justify-content-around"
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Panorámica + 3 periapicales</label
                                 >
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente1"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente1"
-                                    >
-                                      48
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente2"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente2"
-                                    >
-                                      47
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente2"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente2"
-                                    >
-                                      46
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente3"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente3"
-                                    >
-                                      45
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente4"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente4"
-                                    >
-                                      44
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente5"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente5"
-                                    >
-                                      43
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente6"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente6"
-                                    >
-                                      42
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente7"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente7"
-                                    >
-                                      41
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente8"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente8"
-                                    >
-                                      31
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente9"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente9"
-                                    >
-                                      32
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente10"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente10"
-                                    >
-                                      33
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente11"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente11"
-                                    >
-                                      34
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente12"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente12"
-                                    >
-                                      35
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente13"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente13"
-                                    >
-                                      36
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente14"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente14"
-                                    >
-                                      37
-                                    </label>
-                                  </div>
-                                  <div
-                                    class="d-flex flex-column text-center align-items-center"
-                                  >
-                                    <input
-                                      class="form-check-input diente"
-                                      type="checkbox"
-                                      value=""
-                                      id="diente15"
-                                    />
-                                    <label
-                                      class="form-check-label"
-                                      for="diente15"
-                                    >
-                                      38
-                                    </label>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row py-3 m-2 group text-start">
-                              <div class="col-12">
-                                <h4 class="">Fotografias</h4>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Intraoral</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
+                                  Lateral de cráneo</label
+                                >
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Extraorales</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
+                                  ATM</label
+                                >
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Análisis Facial</label
-                                  >
-                                </div>
+                                  Carpal</label
+                                >
                               </div>
-                            </div>
-                            <div class="row py-3 m-2 group text-start">
-                              <div class="col-12">
-                                <h4 class="">Modelos de Estudio</h4>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
+                              <div class="col-md-6">
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Caja cartón</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
+                                  Frontal AP-PA</label
+                                >
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Caja plástico</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
+                                  Frontal (Waters)</label
+                                >
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Modelo 3D Digital</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
+                                  Frontal (Caldwell)</label
+                                >
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
                                   />
-                                  <label class="form-check-label"
-                                    >Modelo 3D Impreso</label
-                                  >
-                                </div>
+                                  Frontal SMV (Hirtz)</label
+                                >
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Senos paranasales</label
+                                >
                               </div>
                             </div>
                           </div>
-                          <div class="col col-lg-6">
-                            <div class="row py-3 m-2 group text-start">
-                              <div class="col-12">
-                                <h4 class="">Paquetes Completos</h4>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="study-card">
+                            <h4>Ortodoncia</h4>
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Estudio completo</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Trazado cef. lateral</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Trazado cef. frontal</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Análisis de modelos</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Modelos de estudio</label
+                            >
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="study-card">
+                            <h4>Radiografía intraoral</h4>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Serie periapical completa</label
+                                >
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Serie periapical superior</label
+                                >
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Serie periapical inferior</label
+                                >
                               </div>
-                              <div class="col-12">
-                                <div class="d-flex">
-                                  <label class="mr-4"
-                                    >Estudio Ortodóntico Completo</label
-                                  >
-                                  <div class="form-check">
-                                    <input
-                                      class="form-check-input"
-                                      type="checkbox"
-                                    />
-                                    <label class="form-check-label">2D</label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input
-                                      class="form-check-input"
-                                      type="checkbox"
-                                    />
-                                    <label class="form-check-label">3D</label>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="d-flex">
-                                  <label class="mr-4"
-                                    >Estudio Rinoplastia Completo</label
-                                  >
-                                  <div class="form-check">
-                                    <input
-                                      class="form-check-input"
-                                      type="checkbox"
-                                    />
-                                    <label class="form-check-label">2D</label>
-                                  </div>
-                                  <div class="form-check">
-                                    <input
-                                      class="form-check-input"
-                                      type="checkbox"
-                                    />
-                                    <label class="form-check-label">3D</label>
-                                  </div>
-                                </div>
+                              <div class="col-md-6">
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Serie interproximal</label
+                                >
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Oclusal superior</label
+                                >
+                                <label class="study-option"
+                                  ><input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                  />
+                                  Oclusal inferior</label
+                                >
                               </div>
                             </div>
-                            <div class="row py-3 m-2 group text-start">
-                              <div class="col-12">
-                                <h4 class="">Análisis Cefalométricos</h4>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
+                            <label class="study-option mt-2"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Radiografía individual. Marque las piezas
+                              requeridas</label
+                            >
+                            <div class="tooth-grid">
+                              <div class="tooth-row">
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
                                     type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Ricketts</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
+                                  /><span>18</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
                                     type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Ricketts Frontal</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
+                                  /><span>17</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
                                     type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Steiner</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
+                                  /><span>16</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
                                     type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Bjork - Jarabak</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
+                                  /><span>15</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
                                     type="checkbox"
-                                  />
-                                  <label class="form-check-label"
-                                    >Mc Namara</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-6">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
+                                  /><span>14</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
                                     type="checkbox"
-                                  />
-                                  <label class="form-check-label">Otro</label>
-                                </div>
+                                  /><span>13</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>12</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>11</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>21</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>22</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>23</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>24</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>25</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>26</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>27</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>28</span></label
+                                >
+                              </div>
+                              <div class="tooth-row">
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>48</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>47</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>46</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>45</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>44</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>43</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>42</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>41</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>31</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>32</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>33</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>34</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>35</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>36</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>37</span></label
+                                >
+                                <label class="tooth-item"
+                                  ><input
+                                    class="form-check-input diente"
+                                    type="checkbox"
+                                  /><span>38</span></label
+                                >
                               </div>
                             </div>
-                            <div class="row py-3 m-2 group text-start">
-                              <div class="col-12">
-                                <h4 class="">Tomografía 3D</h4>
-                              </div>
-                              <div class="col-4">
-                                <div class="form-check">
-                                  <input
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="study-card">
+                            <h4>Tomografía</h4>
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Completa</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Arcada superior</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Arcada inferior</label
+                            >
+                            <label class="study-option"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Cuadrante. Marque cuadrante requerido:</label
+                            >
+                            <div class="quadrant-options">
+                              <label class="study-option-inline"
+                                ><input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                />
+                                I</label
+                              >
+                              <label class="study-option-inline"
+                                ><input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                />
+                                II</label
+                              >
+                              <label class="study-option-inline"
+                                ><input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                />
+                                III</label
+                              >
+                              <label class="study-option-inline"
+                                ><input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                />
+                                IV</label
+                              >
+                            </div>
+                            <label class="study-option mt-2"
+                              ><input
+                                class="form-check-input"
+                                type="checkbox"
+                              />
+                              Estudio endodóntico 3D (Endoscan)</label
+                            >
+                            <div class="study-inline-field">
+                              <span>Pieza:</span>
+                              <input class="study-text-input" type="text" />
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="study-card">
+                            <h4>Fotografía clínica</h4>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
                                   />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >CD (VISOR)</label
-                                  >
-                                </div>
+                                  Foto intraoral</label
+                                >
                               </div>
-                              <div class="col-4">
-                                <div class="form-check">
-                                  <input
+                              <div class="col-md-4">
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
                                   />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >CD (DICOM)
-                                  </label>
-                                </div>
+                                  Foto extraoral</label
+                                >
                               </div>
-                              <div class="col-4 mb-3">
-                                <div class="form-check">
-                                  <input
+                              <div class="col-md-4">
+                                <label class="study-option"
+                                  ><input
                                     class="form-check-input"
                                     type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
                                   />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >PLACA RX
-                                  </label>
-                                </div>
-                              </div>
-                              <div class="col-4">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >Maxilar Superior</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-4">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >Mailar Inferior</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-4">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >Ambos</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >Cráneo Completo</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >ATM (boca abierta/cerrada)</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >Nariz y Senos Paranasales</label
-                                  >
-                                </div>
-                              </div>
-                              <div class="col-12">
-                                <div class="form-check">
-                                  <input
-                                    class="form-check-input"
-                                    type="checkbox"
-                                    name="Tomografia"
-                                    id="Tomografia1"
-                                  />
-                                  <label
-                                    class="form-check-label"
-                                    for="Tomografia1"
-                                    >Zona Especifica (marcar zona de
-                                    interés)</label
-                                  >
-                                </div>
+                                  Análisis facial</label
+                                >
                               </div>
                             </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                          <div class="study-card">
+                            <h4>Observaciones</h4>
+                            <textarea class="study-notes" rows="4"></textarea>
                           </div>
                         </div>
                       </form>
@@ -2583,6 +2031,7 @@
     <!-- Core theme JS-->
     <!--<script src="js/scripts.js"></script>-->
     <script src="js/calendar.js"></script>
+    <script src="js/env-config.js"></script>
     <script src="js/app.js"></script>
     <script src="js/validation.js"></script>
   </body>

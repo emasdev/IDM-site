@@ -2,6 +2,8 @@
 (function () {
   "use strict";
 
+  // Enable with: window.DEVELOPER_MODE = true
+  var developerModeBypassValidation = window.DEVELOPER_MODE === true;
   var needValidation = false;
   // Fetch all the forms we want to apply custom Bootstrap validation styles to
   var forms = document.querySelectorAll(".needs-validation");
@@ -13,10 +15,10 @@
       function (event) {
         event.preventDefault();
         event.stopPropagation();
-        if (needValidation) {
+        if (needValidation && !developerModeBypassValidation) {
           if (!form.checkValidity()) {
           } else {
-            if ((form.id = "datos-doctor")) {
+            if (form.id === "datos-doctor") {
               tabToStep(1);
             }
           }
@@ -25,7 +27,7 @@
           tabToStep(1);
         }
       },
-      false
+      false,
     );
   });
 
