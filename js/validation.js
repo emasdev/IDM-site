@@ -47,7 +47,10 @@
     var modal = document.getElementById("contact-modal");
     var body = document.querySelector("#contact-modal .modal-body");
 
-    if (document.activeElement && typeof document.activeElement.blur === "function") {
+    if (
+      document.activeElement &&
+      typeof document.activeElement.blur === "function"
+    ) {
       document.activeElement.blur();
     }
 
