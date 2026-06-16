@@ -2,7 +2,7 @@
   "use strict";
 
   // Default value if .env is missing or cannot be loaded.
-  window.DEVELOPER_MODE = false;
+  window.DEVELOPER_MODE = true;
 
   function parseBoolean(value) {
     if (!value) {

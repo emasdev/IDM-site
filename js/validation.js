@@ -43,6 +43,25 @@
     tabToStep($(this).data("index"));
   });
 
+  function scrollModalToTop() {
+    var modal = document.getElementById("contact-modal");
+    var body = document.querySelector("#contact-modal .modal-body");
+
+    if (document.activeElement && typeof document.activeElement.blur === "function") {
+      document.activeElement.blur();
+    }
+
+    if (modal) {
+      modal.scrollTop = 0;
+    }
+
+    if (body) {
+      body.scrollTop = 0;
+    }
+
+    window.scrollTo(0, 0);
+  }
+
   function tabToStep(index) {
     if (index == 1) {
       if ($(".event-container").is(":visible")) {
@@ -120,6 +139,10 @@
     $(".step").removeClass("d-none");
     console.log(stepElm);
     $(stepElm).show();
+
+    scrollModalToTop();
+    requestAnimationFrame(scrollModalToTop);
+    setTimeout(scrollModalToTop, 80);
   }
   $("#contact-modal").on("show.bs.modal", function (event) {
     $(".step").hide();
