@@ -159,7 +159,9 @@
   background: #d0e6ff;
   border-radius: 4px;
   box-sizing: border-box;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 1px 3px rgba(0, 0, 0, 0.06),
+    0 1px 2px rgba(0, 0, 0, 0.12);
   text-align: left;
 }
 .calendar .event-container .event-date {
@@ -182,6 +184,15 @@
 
 .horarios-wrapper {
   text-transform: none;
+}
+
+.calendar .day.active {
+  background: #439bff;
+  color: white;
+  border-color: #439bff;
+}
+.calendar .day.active.today {
+  background: #1a7fe0;
 }
 
 #step-4 .fa-check-circle {
