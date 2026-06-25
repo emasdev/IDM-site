@@ -1,10 +1,13 @@
 import { useRef, useState } from "react";
 import Modal from "./Modal";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const DEVELOPER_MODE = import.meta.env.VITE_DEVELOPER_MODE === "true";
 
 export default function ContactInfoModal({ show, onClose }) {
   const [step, setStep] = useState(0);
+  const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
     nombre: "",
     apellidos: "",
@@ -14,16 +17,34 @@ export default function ContactInfoModal({ show, onClose }) {
   });
   const formRef = useRef(null);
 
-  const handleSubmit = () => {
-    if (DEVELOPER_MODE) {
-      setStep(1);
+  const handleSubmit = async () => {
+    const el = formRef.current;
+    if (!DEVELOPER_MODE && !el?.checkValidity()) {
+      el?.classList.add("was-validated");
       return;
     }
-    const el = formRef.current;
-    if (el?.checkValidity()) {
+
+    setLoading(true);
+    try {
+      await addDoc(collection(db, "mail"), {
+        to: [form.email, "idm.mx.contacto@gmail.com"],
+        message: {
+          subject: "Solicitud de Informes - IDM",
+          html: `
+            <h2>Nueva Solicitud de Informes</h2>
+            <p><strong>Nombre:</strong> ${form.nombre} ${form.apellidos}</p>
+            <p><strong>Teléfono:</strong> ${form.telefono}</p>
+            <p><strong>Email:</strong> ${form.email}</p>
+            <p><strong>Mensaje:</strong> ${form.mensaje}</p>
+          `,
+        },
+      });
       setStep(1);
-    } else {
-      el?.classList.add("was-validated");
+    } catch (error) {
+      console.error("Error enviando email:", error);
+      alert("Error: " + error.message);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -139,11 +160,18 @@ export default function ContactInfoModal({ show, onClose }) {
                   className="btn btn-outline-primary"
                   type="button"
                   onClick={handleSubmit}
+                  disabled={loading}
                 >
-                  Siguiente{" "}
-                  <span>
-                    <i className="fas fa-arrow-right fa-fw" />
-                  </span>
+                  {loading ? (
+                    "Enviando..."
+                  ) : (
+                    <>
+                      Siguiente{" "}
+                      <span>
+                        <i className="fas fa-arrow-right fa-fw" />
+                      </span>
+                    </>
+                  )}
                 </button>
               </div>
             )}

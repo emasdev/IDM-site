@@ -1,6 +1,8 @@
 import { useRef, useState } from "react";
 import Modal from "./Modal";
 import SimpleCalendar from "./SimpleCalendar";
+import { db } from "../firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const DEVELOPER_MODE = import.meta.env.VITE_DEVELOPER_MODE === "true";
 
@@ -88,6 +90,7 @@ function ToothCheckbox({ num, checked, onChange }) {
 // ── Main component ────────────────────────────────────────────────────────────
 export default function StudyOrderModal({ show, onClose }) {
   const [step, setStep] = useState(0);
+  const [loading, setLoading] = useState(false);
 
   // Step 0 — forms
   const [doctor, setDoctor] = useState({
@@ -690,17 +693,65 @@ export default function StudyOrderModal({ show, onClose }) {
       <button
         className="btn btn-outline-primary me-2"
         onClick={() => goToStep(2)}
+        disabled={loading}
       >
         <span>
           <i className="fas fa-arrow-left fa-fw" />
         </span>{" "}
         Anterior
       </button>
-      <button className="btn btn-outline-primary" onClick={() => goToStep(4)}>
-        Confirmar{" "}
-        <span>
-          <i className="fas fa-arrow-right fa-fw" />
-        </span>
+      <button
+        className="btn btn-outline-primary"
+        onClick={async () => {
+          setLoading(true);
+          try {
+            await addDoc(collection(db, "mail"), {
+              to: "sucursal.delvalle@idm-mexico.com",
+              message: {
+                subject: "Nueva Orden de Estudio - IDM",
+                html: `
+                  <h2>Nueva Orden de Estudio</h2>
+                  <p><strong>Doctor:</strong> ${doctor.nombre} ${
+                    doctor.apellidos
+                  }</p>
+                  <p><strong>Paciente:</strong> ${paciente.nombre} ${
+                    paciente.apellidos
+                  }</p>
+                  <p><strong>Fecha de Cita:</strong> ${formatDate(
+                    selectedDate,
+                  )} a las ${hora}:${minutos} hrs.</p>
+                  <p><strong>Estudios:</strong></p>
+                  <ul>
+                    ${selectedStudiesList.map((s) => `<li>${s}</li>`).join("")}
+                  </ul>
+                  ${
+                    observaciones
+                      ? `<p><strong>Observaciones:</strong> ${observaciones}</p>`
+                      : ""
+                  }
+                `,
+              },
+            });
+            goToStep(4);
+          } catch (error) {
+            console.error("Error enviando email:", error);
+            alert("Error: " + error.message);
+          } finally {
+            setLoading(false);
+          }
+        }}
+        disabled={loading}
+      >
+        {loading ? (
+          "Enviando..."
+        ) : (
+          <>
+            Confirmar{" "}
+            <span>
+              <i className="fas fa-arrow-right fa-fw" />
+            </span>
+          </>
+        )}
       </button>
     </div>
   );
