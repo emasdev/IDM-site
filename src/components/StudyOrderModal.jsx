@@ -103,7 +103,6 @@ export default function StudyOrderModal({ show, onClose }) {
     nombre: "",
     apellidos: "",
     telefono: "",
-    email: "",
   });
   const formRef = useRef(null);
 
@@ -289,7 +288,7 @@ export default function StudyOrderModal({ show, onClose }) {
                 <label htmlFor="paciente-apellidos">Apellidos</label>
               </div>
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-12">
               <div className="form-floating mb-3">
                 <input
                   required
@@ -303,21 +302,6 @@ export default function StudyOrderModal({ show, onClose }) {
                   }
                 />
                 <label htmlFor="paciente-telefono">Teléfono</label>
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="form-floating mb-3">
-                <input
-                  type="email"
-                  className="form-control"
-                  id="paciente-email"
-                  placeholder="Email"
-                  value={paciente.email}
-                  onChange={(e) =>
-                    setPaciente((p) => ({ ...p, email: e.target.value }))
-                  }
-                />
-                <label htmlFor="paciente-email">Email</label>
               </div>
             </div>
           </div>
@@ -650,7 +634,6 @@ export default function StudyOrderModal({ show, onClose }) {
                     {paciente.nombre} {paciente.apellidos}
                   </strong>
                 </div>
-                <div>{paciente.email}</div>
                 <div>{paciente.telefono}</div>
               </div>
             </div>
@@ -714,9 +697,14 @@ export default function StudyOrderModal({ show, onClose }) {
                   <p><strong>Doctor:</strong> ${doctor.nombre} ${
                     doctor.apellidos
                   }</p>
+                  <p><strong>Email Doctor:</strong> ${doctor.email}</p>
+                  <p><strong>Teléfono Doctor:</strong> ${doctor.telefono}</p>
+                  <hr/>
                   <p><strong>Paciente:</strong> ${paciente.nombre} ${
                     paciente.apellidos
                   }</p>
+                  <p><strong>Teléfono Paciente:</strong> ${paciente.telefono}</p>
+                  <hr/>
                   <p><strong>Fecha de Cita:</strong> ${formatDate(
                     selectedDate,
                   )} a las ${hora}:${minutos} hrs.</p>
