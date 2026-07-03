@@ -44,7 +44,7 @@ export default function Navbar({ onOpenContact }) {
             <li className="nav-item mx-0 mx-lg-1">
               <a
                 className="nav-link py-3 px-0 px-lg-3 rounded"
-                href="tel:+52-55-5524-4685"
+                href="tel:+52-55-1543-5496"
               >
                 Llamar Ahora
               </a>
