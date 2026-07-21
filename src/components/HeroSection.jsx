@@ -4,29 +4,35 @@ import { Carousel } from "bootstrap";
 const SLIDES = [
   { img: "assets/img/gallery/9.jpeg", caption: "" },
   {
+    img: "assets/img/fotos/fotos_carrusel1(old).jpg",
+    caption:
+      "Nuestra razón de existir es ayudar a los especialistas de la salud a convertir cada caso clínico en una rehabilitación exitosa.",
+  },
+  {
     img: "assets/img/fotos/fotos_carrusel1.jpg",
     caption:
-      "Para prevenir aglomeraciones en la sala de espera, le rogamos agendar previa cita y acudir puntualmente.",
+      "Para prevenir aglomeraciones en la sala de espera, le solicitamos agendar previa cita y acudir puntualmente.",
   },
   {
     img: "assets/img/fotos/fotos_carrusel2.jpg",
     caption:
-      "Para garantizar disponibilidad, le rogamos agendar su cita con al menos 24 horas de anticipación.",
+      "Para garantizar disponibilidad, le solicitamos agendar su cita con al menos 24 horas de anticipación.",
+  },
+  ,
+  {
+    img: "assets/img/fotos/fotos_carrusel5.jpg",
+    caption:
+      "Consulte disponibilidad y horarios enviando un mensaje vía WhatsApp o llamando por teléfono.",
   },
   {
     img: "assets/img/fotos/fotos_carrusel3.jpg",
     caption:
-      "Atendiendo a las recomendaciones del gobierno de la CDMX, para realizar cualquier estudio se requiere acudir con previa cita.",
+      "Contamos con amplia experiencia atendiendo todo tipo de pacientes: infantiles, adultos mayores y personas con capacidades diferentes.",
   },
   {
     img: "assets/img/fotos/fotos_carrusel4.jpg",
     caption:
       "Durante su visita seguiremos todos los protocolos de higiene, para realizar su estudio de manera segura.",
-  },
-  {
-    img: "assets/img/fotos/fotos_carrusel5.jpg",
-    caption:
-      "Antes de visitarnos, consulte disponibilidad y horarios enviando un mensaje vía WhatsApp ó llamando por teléfono.",
   },
 ];
 
@@ -126,10 +132,9 @@ export default function HeroSection({ onOpenStudy }) {
           <div className="divider-custom-line" />
         </div>
         <p className="masthead-subheading font-weight-light mb-0">
-          IDM, Imagen &amp; Diagnóstico Maxilofacial cuenta con personal
-          cualificado con amplia experiencia atendiendo todo tipo de pacientes
-          (infantiles, adultos mayores, personas con capacidades diferentes,
-          etc.)
+          En iDM, ayudamos a los profesionales de la salud bucal a tomar mejores
+          decisiones clínicas y contribuimos a que más personas recuperen su
+          salud.
         </p>
       </div>
     </>

@@ -5,28 +5,33 @@ export default function Footer() {
         <div className="container">
           <div className="row">
             <div className="col-lg-4 mb-5 mb-lg-0">
-              <h4 className="text-uppercase mb-4">Dirección</h4>
+              <h4 className="text-uppercase mb-4">
+                iDM | Imagen & Diagnóstico Maxilofacial
+              </h4>
               <p className="lead mb-0">
-                Plaza Pabellón del Valle
+                Plaza Pabellón Del Valle
                 <br />
-                Av. Universidad 740, Planta Baja
+                Avenida Universidad 740, planta baja, local B 09-C
                 <br />
+                Santa Cruz Atoyac Benito Juárez, 03310
                 <br />
-                Local B09-C, Santa Cruz Atoyac, Benito Juárez, 03100, CDMX
+                Ciudad de México, CDMX.
               </p>
             </div>
             <div className="col-lg-4 mb-5">
-              <h4 className="text-uppercase mb-4">Horario</h4>
+              <h4 className="text-uppercase mb-4">Horario de atención</h4>
               <p className="lead mb-0">
-                Lunes a Viernes: 9:00 - 19:00
+                Lunes a Viernes de 09:00 a 19:00 hrs.
                 <br />
-                Sabado: 9:00 - 14:00
+                Sábado de 09:00 a 14:00 hrs.
               </p>
             </div>
             <div className="col-lg-4 mb-5 mb-lg-0">
-              <h4 className="text-uppercase mb-4">Telefono</h4>
+              <h4 className="text-uppercase mb-4">Contacto</h4>
               <p className="lead mb-0">
-                <i className="fab fa-whatsapp mr-2" /> 55 1683 6073
+                Teléfono fijo (55) 1543 5396
+                <br />
+                sucursal.delvalle@idm-mexico.com
               </p>
             </div>
           </div>

@@ -25,6 +25,11 @@
   background: #527c88;
 }
 
+#mainNav .container {
+  display: flex;
+  justify-content: space-between;
+}
+
 #header img {
   width: 100%;
 }
