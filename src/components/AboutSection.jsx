@@ -1,6 +1,6 @@
 export default function AboutSection() {
   return (
-    <section className="page-section bg-primary text-primary mb-0">
+    <section className="page-section bg-primary text-primary mb-0 about">
       <div className="container">
         <h2 className="page-section-heading text-center text-uppercase text-primary">
           Nosotros
@@ -30,17 +30,21 @@ export default function AboutSection() {
               interpretamos nuestra labor. En iDM no producimos simplemente
               estudios para diagnóstico, el verdadero valor de nuestro trabajo
               consiste en contribuir a que cada caso clínico se convierta en una
-              rehabilitación exitosa. Más allá del diagnóstico, significa que en
-              iDM entendemos que detrás de cada radiografía hay una persona que
-              espera recuperar su salud; detrás de cada estudio hay un
-              profesional que necesita información confiable para tomar
-              decisiones; y detrás de cada decisión hay una familia cuya calidad
-              de vida depende de la precisión con la que se lleve a cabo una
-              rehabilitación. Nuestro propósito es contribuir al éxito de cada
-              tratamiento, a través de información diagnóstica confiable,
-              procesos eficientes, innovación tecnológica y una relación de
-              colaboración permanente con los especialistas que depositan su
-              confianza en nosotros.
+              rehabilitación exitosa.
+            </p>
+            <p className="lead">
+              Más allá del diagnóstico, significa que en iDM entendemos que
+              detrás de cada radiografía hay una persona que espera recuperar su
+              salud; detrás de cada estudio hay un profesional que necesita
+              información confiable para tomar decisiones; y detrás de cada
+              decisión hay una familia cuya calidad de vida depende de la
+              precisión con la que se lleve a cabo una rehabilitación.
+            </p>
+            <p className="lead">
+              Nuestro propósito es contribuir al éxito de cada tratamiento, a
+              través de información diagnóstica confiable, procesos eficientes,
+              innovación tecnológica y una relación de colaboración permanente
+              con los especialistas que depositan su confianza en nosotros.
             </p>
           </div>
           <div className="col-12 mb-4">
@@ -68,7 +72,7 @@ export default function AboutSection() {
             <p className="lead">
               Cada estudio entregado por iDM representa una promesa:
             </p>
-            <ul>
+            <ul className="lead">
               <li>
                 La promesa de haber trabajado con el máximo cuidado posible.
               </li>
