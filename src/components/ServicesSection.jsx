@@ -4,99 +4,91 @@ import Modal from "./Modal";
 const SERVICES = [
   {
     id: 1,
-    thumb: "assets/img/services/1.jpg",
+    thumb: "assets/img/estudios-min/1.png",
     title: "Rx. PANORÁMICA",
-    modalImg: "assets/img/services/1.jpg",
+    modalImg: "assets/img/estudios/1.png",
     description:
       "La radiografía panorámica dental, también conocida como ortopantomografía, es un estudio médico de imagen en dos dimensiones (2D) rápido y no invasivo que utiliza una dosis mínima de radiación para capturar todas las estructuras de la boca en una sola toma.",
   },
   {
     id: 2,
-    thumb: "assets/img/services/2.jpg",
+    thumb: "assets/img/estudios-min/2.png",
     title: "Rx. LATERAL DE CRÁNEO",
-    modalImg: "assets/img/services/2.jpg",
+    modalImg: "assets/img/estudios/2.png",
     description:
       "Una radiografía lateral de cráneo con plomada es un estudio de imagen especializado en dos dimensiones (2D), en el que se añade una plomada física (cadena metálica vertical que cae por gravedad) al momento de tomar la radiografía. Esto sirve como una referencia visual de la vertical verdadera para evaluar con total precisión la postura de la cabeza, el cuello y la columna cervical en relación con la gravedad.",
   },
   {
     id: 3,
-    thumb: "assets/img/services/3.jpg",
+    thumb: "assets/img/estudios-min/3.png",
     title: "Rx. LATERAL DE CRÁNEO CON PLOMADA",
-    modalImg: "assets/img/services/3.jpg",
+    modalImg: "assets/img/estudios/3.png",
     description:
       "Una radiografía lateral de cráneo con plomada es un estudio de imagen especializado en dos dimensiones (2D), en el que se añade una plomada física (cadena metálica vertical que cae por gravedad) al momento de tomar la radiografía. Esto sirve como una referencia visual de la vertical verdadera para evaluar con total precisión la postura de la cabeza, el cuello y la columna cervical en relación con la gravedad.",
   },
   {
     id: 4,
-    thumb: "assets/img/services/4.jpg",
+    thumb: "assets/img/estudios-min/4.png",
     title: "Rx. PERIAPICAL INDIVIDUAL",
-    modalImg: "assets/img/services/4.jpg",
+    modalImg: "assets/img/estudios/4.png",
     description:
       "Una radiografía periapical individual es una pequeña radiografía dental utilizada para observar un diente completo, desde la corona hasta más allá de la raíz. A diferencia de las radiografías panorámicas que muestran toda la boca, este tipo de radiografía se enfoca detalladamente en solo uno o dos dientes por película.",
   },
   {
     id: 5,
-    thumb: "assets/img/services/5.jpg",
+    thumb: "assets/img/estudios-min/5.png",
     title: "SERIE Rx. PERIAPICAL COMPLETA",
-    modalImg: "assets/img/services/5.jpg",
+    modalImg: "assets/img/estudios/5.png",
     description:
       "Básicamente, este es el mismo estudio que la Rx. Periapical individual, pero la diferencia radica en el alcance y el objetivo del diagnóstico. Mientras la radiografía periapical individual evalúa un problema puntual en uno o dos órganos dentarios, una Serie de Rx. Periapical Completa ofrece un mapa detallado de toda la boca.",
   },
   {
     id: 6,
-    thumb: "assets/img/services/6.jpg",
+    thumb: "assets/img/estudios-min/6.png",
     title: "Rx. ATM COMPARATIVA (BOCA ABIERTA/CERRADA)",
-    modalImg: "assets/img/services/6.jpg",
+    modalImg: "assets/img/estudios/6.png",
     description:
       "Una radiografía comparativa de la articulación temporomandibular (ATM) es un estudio médico de imagen en dos dimensiones (2D), rápido y no invasivo que utiliza una dosis mínima de radiación para capturar la estructura de ambas articulaciones mandibulares (izquierda y derecha), tanto con la boca abierta como con la boca cerrada.",
   },
   {
     id: 7,
-    thumb: "assets/img/services/7.jpg",
+    thumb: "assets/img/estudios-min/7.png",
     title: "Rx. AP - PA DE CRÁNEO",
-    modalImg: "assets/img/services/7.jpg",
+    modalImg: "assets/img/estudios/7.png",
     description:
       "Una radiografía AP (Anteroposterior) o PA (Posteroanterior) de cráneo es un estudio médico de imagen en dos dimensiones (2D), rápido y no invasivo que utiliza una dosis mínima de radiación para capturar una vista de los huesos del cráneo, proyectada de adelante hacia atrás (AP) o de atrás hacia adelante (PA). ",
   },
   {
     id: 8,
-    thumb: "assets/img/services/8.jpg",
+    thumb: "assets/img/estudios-min/8.png",
     title: "Rx.CARPAL",
-    modalImg: "assets/img/services/8.jpg",
+    modalImg: "assets/img/estudios/8.png",
     description:
       "Una radiografía carpal es un estudio médico de imagen en dos dimensiones (2D), rápido y no invasivo que utiliza una dosis mínima de radiación para capturar las estructuras de la mano y la muñeca. Generalmente se practica en la mano izquierda.",
   },
   {
     id: 9,
-    thumb: "assets/img/services/9.jpg",
+    thumb: "assets/img/estudios-min/9.png",
     title: "Rx.SENOS PARANASALES",
-    modalImg: "assets/img/services/9.jpg",
+    modalImg: "assets/img/estudios/9.png",
     description:
       "Una radiografía de senos paranasales es un estudio médico de imagen en dos dimensiones (2D), rápido y no invasivo que utiliza una dosis mínima de radiación para capturar las estructuras de los senos paranasales.",
   },
   {
     id: 10,
-    thumb: "assets/img/services/10.jpg",
+    thumb: "assets/img/estudios-min/10.png",
     title: "TOMOGRAFÍA CBCT",
-    modalImg: "assets/img/services/10.jpg",
+    modalImg: "assets/img/estudios/10.png",
     description:
       "Una tomografía CBCT (Cone Beam Computed Tomography) es un estudio médico de imagen en tres dimensiones (3D), rápido y no invasivo que utiliza una dosis mínima de radiación para capturar las estructuras dentales y maxilofaciales con gran detalle.",
   },
   {
     id: 11,
-    thumb: "assets/img/services/11.jpg",
+    thumb: "assets/img/estudios-min/11.png",
     title: "ENDOSCAN 5x5",
-    modalImg: "assets/img/services/11.jpg",
+    modalImg: "assets/img/estudios/11.png",
     description:
       "Un endoscan 5X5 o tomografía CBCT de un solo órgano dentario, es una radiografía en tres dimensiones (3D) de alta resolución enfocada exclusivamente en un solo diente y sus tejidos circundantes. A diferencia de las tomografías médicas convencionales, utiliza la tecnología de Haz Cónico (Cone Beam Computed Tomography) con un campo de visión muy pequeño (FOV reducido), lo que permite a los endodoncistas observar la anatomía interna del diente con un nivel de detalle milimétrico y con una dosis de radiación mínima.",
-  },
-  {
-    id: 12,
-    thumb: "assets/img/services/12.jpg",
-    title: "Y MÁS…",
-    modalImg: "assets/img/services/12.jpg",
-    description:
-      "En iDM también realizamos otros estudios como: fotografía clínica intraoral y extraoral, análisis facial, trazados cefalométricos, modelos de estudio, etc. ",
   },
 ];
 
