@@ -84,6 +84,10 @@
   border-radius: 5px;
 }
 
+.hero-header {
+  padding-top: 104px;
+}
+
 .hero-carousel {
   width: 100%;
   max-width: 1024px;
@@ -368,22 +372,41 @@ iframe {
     overflow: hidden;
   }
 
+  .hero-header {
+    padding-top: 114px;
+  }
+
   .hero-carousel {
     max-width: 100%;
     margin: 0 auto;
   }
 
   .hero-carousel .carousel-img {
-    max-height: 420px;
+    max-height: 320px;
+    object-fit: cover;
+  }
+
+  .hero-carousel .carousel-caption {
+    bottom: 2.5rem;
+    padding: 0 0.75rem;
+  }
+
+  .hero-carousel .carousel-caption p {
+    font-size: 0.8rem;
+    line-height: 1.3;
+    padding: 4px 10px;
+  }
+
+  .hero-carousel .carousel-indicators {
+    position: absolute;
+    bottom: 0.5rem;
+    top: auto;
+    z-index: 20;
   }
 
   .portfolio-item img {
     max-width: 100%;
     height: auto;
-  }
-
-  .navbar {
-    position: relative;
   }
 
   .study-card h4 {

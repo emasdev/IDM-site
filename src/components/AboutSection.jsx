@@ -54,7 +54,7 @@ export default function AboutSection() {
               diagnósticos más precisos, mediante la oferta de servicios
               auxiliares de diagnóstico de la más alta calidad, tiempos de
               respuesta más ágiles, innovación permanente y una atención
-              profundamente humana para especialistas y pacientes
+              profundamente humana para especialistas y pacientes.
             </p>
           </div>
           <div className="col-12 mb-4">

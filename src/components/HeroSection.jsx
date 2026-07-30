@@ -48,10 +48,7 @@ export default function HeroSection({ onOpenStudy }) {
 
   return (
     <>
-      <header
-        className="text-secondary text-center"
-        style={{ paddingTop: "104px" }}
-      >
+      <header className="hero-header text-secondary text-center">
         <div className="container-fluid d-flex align-items-center flex-column px-0">
           <div
             ref={carouselRef}

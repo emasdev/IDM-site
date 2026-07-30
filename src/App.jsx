@@ -8,6 +8,7 @@ import MapSection from "./components/MapSection";
 import Footer from "./components/Footer";
 import StudyOrderModal from "./components/StudyOrderModal";
 import ContactInfoModal from "./components/ContactInfoModal";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 export default function App() {
   const [studyModalOpen, setStudyModalOpen] = useState(false);
@@ -47,6 +48,8 @@ export default function App() {
         show={contactModalOpen}
         onClose={() => setContactModalOpen(false)}
       />
+
+      <WhatsAppButton />
     </>
   );
 }
