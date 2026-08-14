@@ -21,7 +21,7 @@ export default function Footer() {
             <div className="col-lg-4 mb-5">
               <h4 className="text-uppercase mb-4">Horario de atención</h4>
               <p className="lead mb-0">
-                Lunes a Viernes de 09:00 a 19:00 hrs.
+                Lunes a Viernes de 09:00 a 18:00 hrs.
                 <br />
                 Sábado de 09:00 a 14:00 hrs.
               </p>
