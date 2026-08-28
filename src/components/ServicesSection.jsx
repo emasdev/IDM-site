@@ -96,25 +96,43 @@ export default function ServicesSection() {
   const [activeService, setActiveService] = useState(null);
 
   return (
-    <section className="page-section portfolio" id="portfolio">
+    <section className="page-section services-section" id="portfolio">
       <div className="container">
-        <h2 className="page-section-heading text-center text-uppercase text-secondary mb-0">
-          Nuestros Servicios
-        </h2>
-        <div className="divider-custom">
-          <div className="divider-custom-line" />
-          <div className="divider-custom-icon">
-            <span>
-              <i className="fas fa-tooth" />
-            </span>
+        <div className="services-header">
+          <h2 className="page-section-heading text-center text-uppercase mb-0">
+            Nuestros Servicios
+          </h2>
+          <div className="divider-custom">
+            <div className="divider-custom-line" />
+            <div className="divider-custom-icon">
+              <span>
+                <i className="fas fa-tooth" />
+              </span>
+            </div>
+            <div className="divider-custom-line" />
           </div>
-          <div className="divider-custom-line" />
         </div>
-        <div className="row justify-content-center">
-          {SERVICES.map((service) => (
-            <div key={service.id} className="col-md-6 col-lg-4 mb-5">
-              <div
-                className="portfolio-item mx-auto"
+
+        <div className="services-grid">
+          {SERVICES.map((service) => {
+            const category = service.title.includes("CRÁNEO")
+              ? "Cráneo y cuello"
+              : service.title.includes("ATM")
+                ? "Articulación"
+                : service.title.includes("CBCT") ||
+                    service.title.includes("ENDOSCAN") ||
+                    service.title.includes("TOMOGRAFÍA")
+                  ? "Tomografía"
+                  : service.title.includes("SENOS")
+                    ? "Seno paranasal"
+                    : service.title.includes("CARPAL")
+                      ? "Mano y muñeca"
+                      : "Diagnóstico dental";
+
+            return (
+              <article
+                key={service.id}
+                className={`service-card ${service.id % 2 === 0 ? "service-card-alt" : ""}`}
                 role="button"
                 tabIndex={0}
                 onClick={() => setActiveService(service)}
@@ -122,25 +140,29 @@ export default function ServicesSection() {
                   e.key === "Enter" && setActiveService(service)
                 }
               >
-                <div className="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                  <div className="portfolio-item-caption-content text-center text-white">
-                    <span>
-                      <i className="fas fa-search-plus fa-3x" />
-                    </span>
+                <div className="service-thumb-wrap">
+                  <img src={service.thumb} alt={service.title} />
+                </div>
+
+                <div className="service-body">
+                  <div className="service-kicker">
+                    <span className="service-dot" />
+                    {category}
+                  </div>
+                  <h3>{service.title}</h3>
+                  <p>{service.description.slice(0, 110)}...</p>
+                  <div className="service-meta">
+                    <span>Ver detalle</span>
+                    <i className="fas fa-arrow-right" />
                   </div>
                 </div>
-                <img
-                  className="img-fluid"
-                  src={service.thumb}
-                  alt={service.title}
-                />
-              </div>
-              <h5 className="text-center py-4">{service.title}</h5>
-            </div>
-          ))}
+              </article>
+            );
+          })}
         </div>
-        <div className="row">
-          <p className="text-center">
+
+        <div className="services-note">
+          <p>
             <strong>NOTA:</strong> El día de su estudio, el paciente debe acudir
             con la boca aseada y sin portar objetos metálicos en cabeza, cuello
             y boca, como: prótesis dentales removibles, piercings, aretes,

@@ -25,46 +25,50 @@ function Stars() {
 
 export default function TestimonialsSection() {
   return (
-    <section className="page-section bg-primary text-primary mb-0">
+    <section className="page-section testimonials-section mb-0">
       <div className="container">
-        <h2 className="page-section-heading text-center text-uppercase text-primary">
-          Testimonios
-        </h2>
-        <div className="divider-custom">
-          <div className="divider-custom-line" />
-          <div className="divider-custom-icon">
-            <i className="fas fa-tooth" />
+        <div className="testimonials-header">
+          <h2 className="page-section-heading text-center text-uppercase">
+            Testimonios
+          </h2>
+          <div className="divider-custom">
+            <div className="divider-custom-line" />
+            <div className="divider-custom-icon">
+              <i className="fas fa-tooth" />
+            </div>
+            <div className="divider-custom-line" />
           </div>
-          <div className="divider-custom-line" />
         </div>
-        <div className="row">
+
+        <div className="row testimonials-grid">
           {TESTIMONIALS.map((t) => (
             <div key={t.author} className="col-lg-4">
-              <Stars />
-              <p>{t.text}</p>
-              <p className="text-blue">- {t.author}</p>
+              <article className="testimonial-card">
+                <div className="testimonial-topline">
+                  <Stars />
+                </div>
+                <p className="testimonial-text">{t.text}</p>
+                <div className="testimonial-author">- {t.author}</div>
+              </article>
             </div>
           ))}
         </div>
-        <div className="row mt-2">
-          <div className="d-flex justify-content-around">
-            <a
-              className="text-primary mr-2"
-              href="https://search.google.com/local/writereview?placeid=ChIJgZRy773_0YURtdYmmj_IoE8"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Escribe un comentario
-            </a>
-            <a
-              className="text-primary ml-2"
-              href="https://search.google.com/local/reviews?placeid=ChIJgZRy773_0YURtdYmmj_IoE8"
-              rel="noreferrer"
-              target="_blank"
-            >
-              Más información
-            </a>
-          </div>
+
+        <div className="testimonials-links">
+          <a
+            href="https://search.google.com/local/writereview?placeid=ChIJgZRy773_0YURtdYmmj_IoE8"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Escribe un comentario
+          </a>
+          <a
+            href="https://search.google.com/local/reviews?placeid=ChIJgZRy773_0YURtdYmmj_IoE8"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Más información
+          </a>
         </div>
       </div>
     </section>
