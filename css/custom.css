@@ -716,6 +716,7 @@ body {
 
 .testimonials-grid {
   margin-bottom: 1.75rem;
+  row-gap: 1rem;
 }
 
 .testimonial-card {
