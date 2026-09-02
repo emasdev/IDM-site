@@ -34,7 +34,7 @@ export default function MapSection() {
               </div>
               <div className="location-copy">
                 <span>Llámanos</span>
-                <a href="tel:+52-55-1683-6073">Tel: 55 5603 7325</a>
+                <a href="tel:+52-55-1683-6073">Tel: 55 1683 6073</a>
               </div>
             </div>
 
