@@ -1,49 +1,17 @@
-import { useEffect, useRef, useState } from "react";
-
-const videos = ["/hero.mp4", "/hero2.mp4"];
-
 export default function HeroSection({ onOpenStudy }) {
-  const [videoSrc, setVideoSrc] = useState(videos[0]);
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleEnded = () => {
-      setVideoSrc((current) => {
-        const nextIndex = (videos.indexOf(current) + 1) % videos.length;
-        return videos[nextIndex];
-      });
-    };
-
-    video.addEventListener("ended", handleEnded);
-
-    return () => {
-      video.removeEventListener("ended", handleEnded);
-    };
-  }, []);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    video.load();
-    video.play().catch(() => {});
-  }, [videoSrc]);
-
   return (
     <header className="hero-header text-secondary text-center">
       <div className="hero-video-wrap" aria-hidden="true">
         <video
-          ref={videoRef}
           className="hero-video"
           autoPlay
           muted
+          loop
           playsInline
           poster="/assets/img/logo.png"
-          src={videoSrc}
-        />
+        >
+          <source src="/assets/video/hero.mp4" type="video/mp4" />
+        </video>
         <div className="hero-video-overlay" />
       </div>
 

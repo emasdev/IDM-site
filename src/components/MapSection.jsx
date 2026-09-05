@@ -59,10 +59,7 @@ export default function MapSection() {
                 Cómo llegar
               </a>
 
-              <a
-                className="location-button primary"
-                href="tel:+52-55-1683-6073"
-              >
+              <a className="location-button primary" href="tel:+525515435396">
                 <i className="fas fa-phone-volume" />
                 Llamar ahora
               </a>
